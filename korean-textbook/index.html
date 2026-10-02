@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>재외동포 한국어 2 – 1주 차 교재</title>
+<style>
+:root{
+  --ink:#1f2937; --muted:#6b7280; --line:#e5e7eb; --bg:#fffdf8; --card:#ffffff;
+  --brand:#c2410c; --brand-soft:#fff1e6; --blue:#1d4ed8; --blue-soft:#eaf1ff;
+  --green:#15803d; --green-soft:#e8f7ee; --red:#b91c1c; --red-soft:#fdecec; --yellow-soft:#fff7d6;
+}
+*{box-sizing:border-box}
+html{color-scheme:light}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:"Noto Sans KR","Malgun Gothic","Apple SD Gothic Neo","NanumGothic",system-ui,sans-serif;
+  line-height:1.75;font-size:16px}
+.wrap{max-width:860px;margin:0 auto;padding:0 16px 64px}
+h1,h2,h3,h4{line-height:1.35;margin:0 0 .5em}
+p{margin:.4em 0}
+.en{color:var(--muted);font-size:.88em}
+
+/* toolbar (screen only) */
+.toolbar{position:sticky;top:0;z-index:10;background:#fff;border-bottom:1px solid var(--line);
+  display:flex;gap:8px;flex-wrap:wrap;align-items:center;padding:8px 16px;justify-content:center}
+.toolbar button{font:inherit;font-size:.85rem;padding:6px 12px;border-radius:999px;border:1px solid var(--line);
+  background:#fff;cursor:pointer}
+.toolbar button:hover{background:var(--brand-soft);border-color:var(--brand)}
+.toolbar a{font-size:.85rem;color:var(--muted);text-decoration:none;padding:6px 8px}
+
+/* cover */
+.cover{min-height:92vh;display:flex;flex-direction:column;justify-content:center;text-align:center;padding:48px 0}
+.cover .tag{display:inline-block;align-self:center;background:var(--brand-soft);color:var(--brand);
+  font-weight:700;border-radius:999px;padding:4px 14px;font-size:.9rem}
+.cover h1{font-size:2.6rem;margin:.5em 0 .1em}
+.cover .sub{font-size:1.15rem;color:var(--muted)}
+.cover .words{font-size:3rem;margin:.6em 0;letter-spacing:.15em}
+.cover .goal{max-width:520px;margin:1em auto;text-align:left;background:var(--card);border:1px solid var(--line);
+  border-radius:14px;padding:16px 22px}
+.cover .goal li{margin:.25em 0}
+.nameline{margin-top:28px;color:var(--muted)}
+.nameline span{display:inline-block;border-bottom:1px solid #9ca3af;min-width:150px;margin:0 8px}
+
+/* chapters */
+.chapter{padding-top:28px}
+.chapter>h2{font-size:1.6rem;border-left:8px solid var(--brand);padding:2px 0 2px 12px;margin-bottom:.8em}
+.chapter>h2 small{display:block;font-size:.85rem;color:var(--muted);font-weight:500}
+h3{font-size:1.2rem;margin-top:1.4em}
+.concept{background:var(--blue-soft);border:1px solid #bfd3ff;border-radius:14px;padding:14px 18px;margin:14px 0;break-inside:avoid}
+.concept h3,.concept h4{margin-top:0;color:var(--blue)}
+.tip{background:var(--yellow-soft);border:1px solid #f1dd8a;border-radius:12px;padding:10px 16px;margin:12px 0;break-inside:avoid}
+.warn{background:var(--red-soft);border:1px solid #f3b9b9;border-radius:12px;padding:10px 16px;margin:12px 0;break-inside:avoid}
+.ok{background:var(--green-soft);border:1px solid #b7e3c7;border-radius:12px;padding:10px 16px;margin:12px 0;break-inside:avoid}
+
+/* vocabulary cards */
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.vcard{background:var(--card);border:2px solid var(--line);border-radius:16px;padding:14px 16px;break-inside:avoid}
+.vcard .head{display:flex;align-items:baseline;gap:10px;border-bottom:2px dashed var(--line);padding-bottom:6px;margin-bottom:8px}
+.vcard .word{font-size:2.2rem;font-weight:800;color:var(--brand)}
+.vcard .count{color:var(--muted);font-size:.85rem}
+.meaning{display:grid;grid-template-columns:3.2rem 1fr;gap:8px;align-items:center;padding:6px 0;border-top:1px solid #f1f1f1}
+.meaning:first-of-type{border-top:0}
+.meaning .pic{font-size:2.4rem;text-align:center;line-height:1}
+.meaning b{display:block}
+.meaning .coll{font-size:.9rem;color:var(--blue)}
+
+table{border-collapse:collapse;width:100%;margin:10px 0;break-inside:avoid}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:#faf3ea}
+td.c,th.c{text-align:center}
+.mono{font-weight:700;color:var(--brand)}
+
+/* sentences */
+.sent{list-style:none;padding:0;margin:8px 0}
+.sent li{padding:8px 12px;margin:6px 0;background:var(--card);border:1px solid var(--line);border-radius:10px;break-inside:avoid}
+.sent b.hl{color:var(--brand);background:var(--brand-soft);border-radius:4px;padding:0 3px}
+.sent .tr{display:block;color:var(--muted);font-size:.85rem}
+
+/* write lines */
+.work{margin:10px 0;padding:12px 16px;background:var(--card);border:1px solid var(--line);border-radius:12px;break-inside:avoid}
+.work ol{margin:6px 0;padding-left:1.4em}
+.work li{margin:10px 0}
+input.line{width:100%;font:inherit;border:0;border-bottom:1.5px solid #9ca3af;background:transparent;padding:4px 2px;margin-top:4px;border-radius:0}
+input.line:focus{outline:0;border-bottom-color:var(--brand)}
+.inline-line{display:inline-block;width:8em;border-bottom:1.5px solid #9ca3af;margin:0 4px}
+
+/* grammar visuals */
+.flow{display:flex;gap:10px;align-items:stretch;flex-wrap:wrap;margin:12px 0}
+.flow .box{flex:1 1 150px;background:#fff;border:2px solid var(--blue);border-radius:12px;padding:10px;text-align:center;break-inside:avoid}
+.flow .arrow{align-self:center;font-size:1.6rem;color:var(--blue)}
+.cause-result{display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:center;margin:12px 0}
+.cause-result .a,.cause-result .b{padding:12px 16px;border-radius:12px;font-weight:700;text-align:center;min-width:160px}
+.cause-result .a{background:#fff;border:2px solid var(--blue)}
+.cause-result .b{background:#fff;border:2px solid var(--brand)}
+.cause-result .m{font-size:1.5rem}
+.rule3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.rule3>div{background:#fff;border:2px solid var(--blue);border-radius:12px;padding:10px;break-inside:avoid}
+.rule3 h4{margin:0 0 4px;color:var(--blue)}
+.rule3 .big{font-size:1.4rem;font-weight:800;color:var(--brand)}
+
+/* reading */
+.reading{background:var(--card);border:2px solid var(--line);border-radius:14px;padding:16px 22px;font-size:1.05rem;line-height:2}
+.reading b{color:var(--brand)}
+
+/* quiz */
+.quiz-set{background:var(--card);border:2px solid var(--line);border-radius:16px;padding:14px 18px;margin:18px 0}
+.quiz-set>.qhead{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:6px}
+.quiz-set h3{margin:0}
+.quiz-set .score{font-weight:700;color:var(--green)}
+.quiz-set .reset{font:inherit;font-size:.8rem;border:1px solid var(--line);background:#fff;border-radius:999px;padding:3px 10px;cursor:pointer}
+.quiz-set ol{padding-left:1.6em;margin:10px 0 0}
+.q,.ord{margin:14px 0;padding-bottom:12px;border-bottom:1px dashed var(--line)}
+.q:last-child,.ord:last-child{border-bottom:0}
+.stem{font-size:1.05rem}
+.stem b{color:var(--brand);background:var(--brand-soft);border-radius:4px;padding:0 3px}
+.opts{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.opt,.chip,.ordbtn{font:inherit;border:1.5px solid var(--line);background:#fff;border-radius:10px;padding:5px 12px;cursor:pointer}
+.opt .n{color:var(--muted);margin-right:6px}
+.opt:hover:not(:disabled),.chip:hover:not(:disabled),.ordbtn:hover{border-color:var(--brand);background:var(--brand-soft)}
+.opt:disabled,.chip:disabled{cursor:default}
+.q.done .opt.correct{background:var(--green-soft);border-color:var(--green)}
+.q.done .opt.picked.wrongpick{background:var(--red-soft);border-color:var(--red)}
+.fb{margin-top:6px;font-size:.92rem;color:var(--muted)}
+.q.right .fb,.ord.right .fb{color:var(--green)}
+.q.wrong .fb,.ord.wrong .fb{color:var(--red)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0}
+.built{min-height:2.4em;border-bottom:1.5px solid #9ca3af;padding:4px 2px;margin:6px 0;font-size:1.05rem}
+.ordctl{display:flex;gap:8px;flex-wrap:wrap}
+
+/* appendix */
+.more-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.more-grid .m{background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px 14px;break-inside:avoid}
+.more-grid .w{font-size:1.5rem;font-weight:800;color:var(--brand)}
+.check{list-style:none;padding:0}
+.check li{padding:6px 0;border-bottom:1px dashed var(--line)}
+.check li::before{content:"☐ ";font-size:1.2em}
+
+/* teacher / answers (hidden unless toggled) */
+.teacher-only,.answer-key{display:none}
+body.show-key .teacher-only,body.show-key .answer-key{display:block}
+.answer-key ol{padding-left:1.6em}
+.answer-key h4{margin:1em 0 .2em;color:var(--blue)}
+.answer-key li{margin:3px 0}
+
+footer{margin-top:40px;color:var(--muted);font-size:.85rem;text-align:center}
+
+@media (max-width:640px){
+  .cards,.rule3,.more-grid{grid-template-columns:1fr}
+  .cover h1{font-size:2rem}
+}
+
+/* print */
+@page{size:A4;margin:14mm}
+@media print{
+  html,body{background:#fff}
+  body{font-size:11.5pt;line-height:1.6}
+  .toolbar,.reset,.ordctl,.noprint{display:none!important}
+  .wrap{max-width:none;padding:0}
+  .cover{min-height:0;height:250mm;break-after:page}
+  .chapter{break-before:page;padding-top:0}
+  .quiz-set,.work,.vcard,.concept{box-shadow:none}
+  .opt,.chip{border-color:#555}
+  .fb{display:none}
+  .opts{gap:14px}
+  h2,h3,h4{break-after:avoid}
+}
+</style>
+</head>
+<body>
+
+<div class="toolbar noprint">
+  <button type="button" id="btnKey">🔑 교사용 정답 보기/숨기기</button>
+  <button type="button" id="btnPrintStudent">🖨 학생용 인쇄</button>
+  <button type="button" id="btnPrintTeacher">🖨 교사용 인쇄(정답 포함)</button>
+  <a href="#ch1">1장 어휘</a><a href="#ch2">2장 문장</a><a href="#ch3">3장 문법</a>
+  <a href="#ch4">4장 읽기</a><a href="#ch5">5장 퀴즈</a><a href="#app">부록</a>
+</div>
+
+<div class="wrap">
+
+<!-- ================= COVER ================= -->
+<header class="cover">
+  <span class="tag">재외동포 한국어 2 · 1주 차</span>
+  <h1>소리는 같고 뜻은 달라요!</h1>
+  <div class="sub">동음이의어 어휘 · 문장 만들기 · 문법 ‘-아/어서’ · 읽기 · 퀴즈</div>
+  <div class="sub en">Heritage Korean Learners · Level 2 · Week 1 — Same Sound, Different Meaning</div>
+  <div class="words">👁️ 🍐 🌉 🚗</div>
+  <div class="goal">
+    <h3 style="margin-top:0">🎯 이번 주 학습 목표 <span class="en">(Goals)</span></h3>
+    <ol>
+      <li>‘눈, 배, 다리, 차’의 여러 가지 뜻을 알고 문장 속에서 구별할 수 있어요.</li>
+      <li>‘-아/어서’로 <b>이유</b>를 말하고 쓸 수 있어요.</li>
+      <li>배운 어휘와 문법으로 <b>내 문장</b>을 만들 수 있어요.</li>
+      <li>짧은 글을 읽고 내용을 이해하고 퀴즈로 확인할 수 있어요.</li>
+    </ol>
+  </div>
+  <div class="nameline">이름 <span></span> 날짜 <span></span></div>
+</header>
+
+<!-- ================= CH1 VOCAB ================= -->
+<section class="chapter" id="ch1">
+  <h2>제1장 어휘 <small>Vocabulary · 오늘의 주제: 모습이 같지만 뜻이 다른 단어 (동음이의어)</small></h2>
+
+  <div class="concept">
+    <h3>📘 개념: 동음이의어란?</h3>
+    <p><b>동음이의어(同音異義語)</b>는 <b>소리와 글자가 같지만 뜻이 다른 말</b>이에요. <span class="en">(Homonyms: same sound and spelling, different meanings)</span></p>
+    <div class="flow">
+      <div class="box"><b>배</b><br>소리 같음 · 글자 같음</div>
+      <div class="arrow">➡️</div>
+      <div class="box">🧍 몸의 배<br>🍐 과일 배<br>⛴️ 타는 배</div>
+    </div>
+    <p><b>어떤 뜻일까요? 3단계로 찾아요!</b></p>
+    <ol>
+      <li>문장을 <b>끝까지</b> 읽어요.</li>
+      <li>함께 쓰인 <b>단서 말(동사·형용사)</b>을 찾아요. 예) 아프다, 내리다, 먹다, 타다, 마시다, 건너다</li>
+      <li>머릿속에 <b>그림</b>을 떠올려요.</li>
+    </ol>
+  </div>
+
+  <div class="cards">
+    <div class="vcard">
+      <div class="head"><span class="word">눈</span><span class="count">뜻 2개</span></div>
+      <div class="meaning"><div class="pic">👁️</div><div><b>사람이나 동물의 눈 <span class="en">Eye</span></b><span class="coll">눈이 아프다 · 눈이 나쁘다 · 눈을 감다</span></div></div>
+      <div class="meaning"><div class="pic">❄️</div><div><b>겨울에 하늘에서 내리는 하얀 눈 <span class="en">Snow</span></b><span class="coll">눈이 오다/내리다 · 눈싸움 · 눈사람</span></div></div>
+    </div>
+    <div class="vcard">
+      <div class="head"><span class="word">배</span><span class="count">뜻 3개</span></div>
+      <div class="meaning"><div class="pic">🧍</div><div><b>사람의 신체 부위 <span class="en">Stomach</span></b><span class="coll">배가 고프다 · 배가 부르다 · 배가 아프다</span></div></div>
+      <div class="meaning"><div class="pic">🍐</div><div><b>먹는 과일 <span class="en">Pear</span></b><span class="coll">배를 먹다 · 배를 깎다 · 배가 달다</span></div></div>
+      <div class="meaning"><div class="pic">⛴️</div><div><b>물 위에 떠다니는 배 <span class="en">Boat</span></b><span class="coll">배를 타다 · 배가 출발하다</span></div></div>
+    </div>
+    <div class="vcard">
+      <div class="head"><span class="word">다리</span><span class="count">뜻 2개</span></div>
+      <div class="meaning"><div class="pic">🦵</div><div><b>걷거나 뛸 때 쓰는 신체 부위 <span class="en">Leg</span></b><span class="coll">다리가 아프다 · 다리를 다치다</span></div></div>
+      <div class="meaning"><div class="pic">🌉</div><div><b>강이나 바다를 건너는 다리 <span class="en">Bridge</span></b><span class="coll">다리를 건너다 · 다리를 놓다</span></div></div>
+    </div>
+    <div class="vcard">
+      <div class="head"><span class="word">차</span><span class="count">뜻 2개</span></div>
+      <div class="meaning"><div class="pic">🚗</div><div><b>도로를 달리는 자동차 <span class="en">Car</span></b><span class="coll">차를 타다 · 차를 운전하다 · 차가 막히다</span></div></div>
+      <div class="meaning"><div class="pic">🍵</div><div><b>따뜻하게 마시는 음료 <span class="en">Tea</span></b><span class="coll">차를 마시다 · 차를 끓이다 · 유자차</span></div></div>
+    </div>
+  </div>
+
+  <div class="tip">💡 <b>단서 말 모아 보기</b> —
+    아프다 → <b>눈 / 배 / 다리</b> &nbsp;|&nbsp; 내리다 → <b>눈(Snow)</b> &nbsp;|&nbsp; 먹다 → <b>배(Pear)</b> &nbsp;|&nbsp;
+    타다 → <b>배(Boat) / 차(Car)</b> &nbsp;|&nbsp; 건너다 → <b>다리(Bridge)</b> &nbsp;|&nbsp; 마시다 → <b>차(Tea)</b>
+    <br><span class="en">Tip: ‘타다’ is used with both 배 and 차 — look at the other words in the sentence (바다, 섬, 도로, 운전 …).</span>
+  </div>
+
+  <h3>✏️ 어휘 확인 1 — 그림과 뜻 연결하기</h3>
+  <div class="work">
+    <p>다음 그림에 알맞은 말을 쓰세요. <span class="en">(눈 · 배 · 다리 · 차)</span></p>
+    <table>
+      <tr><th class="c">👁️</th><th class="c">❄️</th><th class="c">🍐</th><th class="c">⛴️</th><th class="c">🦵</th><th class="c">🌉</th><th class="c">🚗</th><th class="c">🍵</th></tr>
+      <tr><td><input class="line" type="text" aria-label="그림 1"></td><td><input class="line" type="text" aria-label="그림 2"></td><td><input class="line" type="text" aria-label="그림 3"></td><td><input class="line" type="text" aria-label="그림 4"></td><td><input class="line" type="text" aria-label="그림 5"></td><td><input class="line" type="text" aria-label="그림 6"></td><td><input class="line" type="text" aria-label="그림 7"></td><td><input class="line" type="text" aria-label="그림 8"></td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- ================= CH2 SENTENCES ================= -->
+<section class="chapter" id="ch2">
+  <h2>제2장 문장 만들기 <small>Sentence Building · 어휘 + 단서 말 = 문장</small></h2>
+
+  <div class="concept">
+    <h3>📘 개념: 문장은 이렇게 만들어요</h3>
+    <div class="flow">
+      <div class="box"><b>① 무엇이/을</b><br>눈이 · 배를 · 다리가 · 차를</div>
+      <div class="arrow">+</div>
+      <div class="box"><b>② 단서 말</b><br>아프다 · 먹다 · 건너다 · 마시다</div>
+      <div class="arrow">=</div>
+      <div class="box"><b>③ 문장</b><br>배를 먹어요.</div>
+    </div>
+    <p>조사 <b>이/가</b>(주어)와 <b>을/를</b>(목적어)은 앞말과 <b>붙여 써요</b>. <span class="en">(Particles attach directly to the noun: 눈이, 배를.)</span></p>
+  </div>
+
+  <h3>1. 소리 내어 읽어 보세요 <span class="en">Read aloud</span></h3>
+  <ul class="sent">
+    <li><b>[눈]</b> 스마트폰을 너무 많이 봐서 <b class="hl">눈</b>이 아파요. <span class="tr">Eye — My eyes hurt because I look at my phone too much.</span></li>
+    <li><b>[눈]</b> 밖을 보세요! 하늘에서 하얀 <b class="hl">눈</b>이 내려요. <span class="tr">Snow — Look outside! White snow is falling from the sky.</span></li>
+    <li><b>[배]</b> 밥을 많이 먹어서 <b class="hl">배</b>가 불러요. <span class="tr">Stomach — I ate a lot, so I’m full.</span></li>
+    <li><b>[배]</b> 식사 후에 달콤한 <b class="hl">배</b>를 먹었어요. <span class="tr">Pear — I ate a sweet pear after the meal.</span></li>
+    <li><b>[배]</b> 섬에 가기 위해서 <b class="hl">배</b>를 탔어요. <span class="tr">Boat — I took a boat to go to the island.</span></li>
+    <li><b>[다리]</b> 많이 걸어서 <b class="hl">다리</b>가 아파요. <span class="tr">Leg — My legs hurt because I walked a lot.</span></li>
+    <li><b>[다리]</b> 강 위의 <b class="hl">다리</b>를 건너면 학교가 있어요. <span class="tr">Bridge — If you cross the bridge over the river, there is the school.</span></li>
+    <li><b>[차]</b> 아버지는 <b class="hl">차</b>를 운전해서 회사에 가세요. <span class="tr">Car — My father drives a car to work.</span></li>
+    <li><b>[차]</b> 추운 날에는 따뜻한 <b class="hl">차</b>를 마셔요. <span class="tr">Tea — On cold days I drink warm tea.</span></li>
+  </ul>
+
+  <h3>2. 짝꿍 말 연결하기 <span class="en">Match the clue word</span></h3>
+  <div class="work">
+    <p>왼쪽 말과 어울리는 단서 말을 오른쪽에서 골라 <b>한 문장</b>으로 써 보세요.</p>
+    <table>
+      <tr><th>단어</th><th>단서 말 (보기)</th></tr>
+      <tr><td>눈 (Eye)</td><td>아프다 · 나쁘다 · 감다</td></tr>
+      <tr><td>눈 (Snow)</td><td>내리다 · 오다 · 쌓이다</td></tr>
+      <tr><td>배 (Pear)</td><td>먹다 · 깎다 · 달다</td></tr>
+      <tr><td>배 (Boat)</td><td>타다 · 출발하다</td></tr>
+      <tr><td>다리 (Bridge)</td><td>건너다 · 놓다</td></tr>
+      <tr><td>차 (Tea)</td><td>마시다 · 끓이다</td></tr>
+    </table>
+    <ol>
+      <li>눈(Snow) + 내리다 ➡️ <input class="line" type="text"></li>
+      <li>배(Boat) + 타다 ➡️ <input class="line" type="text"></li>
+      <li>다리(Bridge) + 건너다 ➡️ <input class="line" type="text"></li>
+      <li>차(Tea) + 마시다 ➡️ <input class="line" type="text"></li>
+    </ol>
+  </div>
+
+  <h3>3. 나만의 문장 만들기 <span class="en">Make your own</span></h3>
+  <div class="work">
+    <p>내가 고른 단어: ( <span class="inline-line"></span> ) &nbsp; 뜻: <span class="inline-line"></span></p>
+    <p>직접 만든 문장 1 <input class="line" type="text"></p>
+    <p>내가 고른 단어: ( <span class="inline-line"></span> ) &nbsp; 뜻: <span class="inline-line"></span></p>
+    <p>직접 만든 문장 2 <input class="line" type="text"></p>
+    <p>🎨 <b>도전!</b> 한 단어의 <b>다른 뜻</b>으로 문장을 하나 더 만들어 보세요.</p>
+    <input class="line" type="text" aria-label="도전 문장">
+  </div>
+
+  <div class="tip">🗣️ <b>짝 활동</b> — 짝에게 문장을 읽어 주세요. 짝은 <b>어떤 뜻인지</b> 영어나 그림으로 맞혀 보세요!</div>
+</section>
+
+<!-- ================= CH3 GRAMMAR ================= -->
+<section class="chapter" id="ch3">
+  <h2>제3장 문법 <small>Grammar · 오늘의 문법: -아/어서 (이유를 나타낼 때)</small></h2>
+
+  <div class="concept">
+    <h3>📘 핵심 개념 — 한 장면으로 이해하기</h3>
+    <p>앞의 말이 뒤의 말이 일어난 <b>이유·원인</b>일 때 써요. <span class="en">(because / so)</span></p>
+    <div class="cause-result">
+      <div class="a">🅐 원인<br>비가 <span class="mono">와서</span></div>
+      <div class="m">➡️</div>
+      <div class="b">🅑 결과<br>집에 있었어요.</div>
+    </div>
+    <p style="text-align:center"><b>A-아/어서 B</b> &nbsp;=&nbsp; “A 때문에 B” &nbsp;=&nbsp; A. <b>그래서</b> B.</p>
+  </div>
+
+  <h3>① 만드는 방법: 3단계</h3>
+  <div class="flow">
+    <div class="box"><b>STEP 1</b><br>기본형에서 <b>‘-다’</b>를 빼요<br><span class="en">(어간 stem)</span><br>가다 → <b>가</b></div>
+    <div class="arrow">➡️</div>
+    <div class="box"><b>STEP 2</b><br>마지막 <b>모음</b>을 봐요<br><span class="en">ㅏ, ㅗ 인가요?</span></div>
+    <div class="arrow">➡️</div>
+    <div class="box"><b>STEP 3</b><br><b>-아서 / -어서 / -해서</b>를 붙여요</div>
+  </div>
+
+  <div class="rule3">
+    <div><h4>규칙 1</h4>마지막 모음이 <b>ㅏ, ㅗ</b><div class="big">-아서</div>가다 → <b>가서</b><br>오다 → <b>와서</b><br>좋다 → <b>좋아서</b></div>
+    <div><h4>규칙 2</h4>마지막 모음이 <b>ㅏ, ㅗ가 아님</b><div class="big">-어서</div>먹다 → <b>먹어서</b><br>걸리다 → <b>걸려서</b><br>막히다 → <b>막혀서</b></div>
+    <div><h4>규칙 3</h4>‘<b>하다</b>’로 끝남<div class="big">-해서</div>피곤하다 → <b>피곤해서</b><br>공부하다 → <b>공부해서</b></div>
+  </div>
+
+  <h3>② 변화표 <span class="en">Conjugation table</span></h3>
+  <table>
+    <tr><th>기본형</th><th>어간</th><th>+ -아/어서</th><th>예문</th></tr>
+    <tr><td>가다</td><td>가-</td><td class="mono">가서</td><td>학교에 가서 친구를 만났어요.*</td></tr>
+    <tr><td>오다</td><td>오-</td><td class="mono">와서</td><td>비가 와서 집에 있었어요.</td></tr>
+    <tr><td>많다</td><td>많-</td><td class="mono">많아서</td><td>사람이 많아서 시끄러워요.</td></tr>
+    <tr><td>먹다</td><td>먹-</td><td class="mono">먹어서</td><td>밥을 많이 먹어서 배가 불러요.</td></tr>
+    <tr><td>걸리다</td><td>걸리-</td><td class="mono">걸려서</td><td>감기에 걸려서 학교에 못 갔어요.</td></tr>
+    <tr><td>막히다</td><td>막히-</td><td class="mono">막혀서</td><td>길이 막혀서 늦었어요.</td></tr>
+    <tr><td>피곤하다</td><td>피곤하-</td><td class="mono">피곤해서</td><td>피곤해서 일찍 잤어요.</td></tr>
+    <tr><td>아프다</td><td>아프-</td><td class="mono">아파서</td><td>배가 아파서 병원에 갔어요.</td></tr>
+    <tr><td>춥다</td><td>춥-</td><td class="mono">추워서</td><td>날씨가 추워서 두꺼운 옷을 입었어요.</td></tr>
+  </table>
+  <p class="en">* ‘가서’ can also mean “go and then …” (sequence). In this unit we focus on the <b>reason</b> meaning.</p>
+
+  <div class="tip">⚠️ <b>모양이 바뀌는 말 (조금 어려워요!)</b><br>
+    <b>아프다 → 아파서</b>, <b>바쁘다 → 바빠서</b> : ‘ㅡ’가 빠지고 앞 모음(ㅏ)을 봐요.<br>
+    <b>춥다 → 추워서</b>, <b>덥다 → 더워서</b>, <b>맵다 → 매워서</b> : ‘ㅂ’이 ‘우/오’로 바뀌어요. 이 표현들은 통째로 외워 두면 편해요!</div>
+
+  <h3>③ 꼭 기억해요! 3가지 약속</h3>
+  <div class="warn">
+    <b>❌ 약속 1.</b> ‘-아/어서’ 앞에는 <b>과거형(-았/었-)</b>을 쓰지 않아요.<br>
+    &nbsp;&nbsp;&nbsp;비가 <s>왔어서</s> → 비가 <b>와서</b> 집에 있었어요. (과거는 <b>뒤 문장 끝</b>에서 말해요.)<br>
+    <b>❌ 약속 2.</b> 뒤 문장에 <b>명령(-(으)세요)·권유(-(으)ㅂ시다)</b>를 쓰지 않아요.<br>
+    &nbsp;&nbsp;&nbsp;비가 <s>와서 우산을 쓰세요.</s> → 비가 와요. <b>그러니까</b> 우산을 쓰세요.<br>
+    <b>❌ 약속 3.</b> ‘-아/어서’는 <b>한 문장 안</b>에서 이어 써요. 문장을 나누면 <b>‘그래서’</b>를 써요.<br>
+    &nbsp;&nbsp;&nbsp;비가 와요. <b>그래서</b> 집에 있어요. = 비가 <b>와서</b> 집에 있어요.
+  </div>
+
+  <div class="ok">👍 <b>자주 쓰는 인사말에도 있어요!</b> &nbsp;만나서 반갑습니다. · 늦어서 죄송합니다. · 도와줘서 고마워요.</div>
+
+  <h3>✏️ 문법 연습 1 — 두 문장을 한 문장으로</h3>
+  <div class="work">
+    <p>‘-아/어서’를 사용하여 한 문장으로 연결해 보세요.</p>
+    <ol>
+      <li>날씨가 춥다. + 두꺼운 옷을 입었어요.<br>➡️ <input class="line" type="text"></li>
+      <li>눈이 많이 오다. + 차가 막혀요.<br>➡️ <input class="line" type="text"></li>
+      <li>배가 아프다. + 병원에 갔어요.<br>➡️ <input class="line" type="text"></li>
+      <li>다리가 아프다. + 의자에 앉았어요.<br>➡️ <input class="line" type="text"></li>
+      <li>피곤하다. + 일찍 잤어요.<br>➡️ <input class="line" type="text"></li>
+    </ol>
+  </div>
+
+  <h3>✏️ 문법 연습 2 — 이유를 넣어 문장 완성하기</h3>
+  <div class="work">
+    <ol>
+      <li>저는 <input class="line" type="text" style="width:55%"> 학교에 늦었어요.</li>
+      <li>어제 <input class="line" type="text" style="width:55%"> 집에 일찍 왔어요.</li>
+      <li>오늘은 <input class="line" type="text" style="width:55%"> 기분이 좋아요.</li>
+    </ol>
+  </div>
+
+  <h3>🗣️ 말하기 활동 — 왜요?</h3>
+  <table>
+    <tr><th>질문</th><th>대답 (-아/어서)</th></tr>
+    <tr><td>왜 늦었어요?</td><td>길이 막혀서 늦었어요.</td></tr>
+    <tr><td>왜 병원에 갔어요?</td><td>배가 아파서 병원에 갔어요.</td></tr>
+    <tr><td>왜 차를 마셔요?</td><td>감기에 걸려서 따뜻한 차를 마셔요.</td></tr>
+    <tr><td>왜 한국어를 배워요?</td><td>(내 이유로 대답해 보세요) ______________</td></tr>
+  </table>
+</section>
+
+<!-- ================= CH4 READING ================= -->
+<section class="chapter" id="ch4">
+  <h2>제4장 읽기 <small>Reading · 짧은 글을 읽고 질문에 답해 보세요</small></h2>
+
+  <div class="reading">
+    오늘은 겨울 방학이 시작되는 날입니다. 아침에 일어나서 창밖을 보니 하얀 <b>눈</b>이 내리고 있었습니다. 저는 기분이 너무 좋아서 동생과 함께 밖으로 나갔습니다. 우리는 마당에서 즐겁게 <b>눈</b>싸움을 했습니다.<br><br>
+    그런데 너무 오래 밖에서 놀아서 감기에 걸리고 말았습니다. 머리에 열이 나고 <b>배</b>도 아팠습니다. 엄마는 저에게 따뜻한 유자<b>차</b>를 주셨습니다. 저는 따뜻한 <b>차</b>를 마시고 푹 쉬었습니다. 내일은 아프지 않았으면 좋겠습니다.
+  </div>
+  <p class="en">새 낱말: 방학 vacation · 마당 yard · 눈싸움 snowball fight · 감기 cold(illness) · 열이 나다 have a fever · 유자차 citron tea · 푹 쉬다 rest well</p>
+
+  <h3>✏️ 이해 확인 (쓰기)</h3>
+  <div class="work">
+    <ol>
+      <li>이 글의 주인공은 왜 감기에 걸렸나요? (문법 ‘-아/어서’를 사용해 답해 보세요.)<br><input class="line" type="text"></li>
+      <li>엄마는 주인공에게 무엇을 주셨나요?<br><input class="line" type="text"></li>
+    </ol>
+  </div>
+
+  <div class="quiz-set" data-title="읽기 확인 퀴즈">
+    <div class="qhead"><h3>🧩 읽기 확인 퀴즈</h3><span class="score"></span><button class="reset" type="button">다시 풀기</button></div>
+    <ol>
+      <li class="q" data-opts="눈 (Eye)|눈 (Snow)" data-answer="2" data-exp="‘내리다’, ‘눈싸움’ → 하늘에서 내리는 눈(Snow)이에요."><span class="stem">글의 첫 번째 <b>눈</b>(“하얀 눈이 내리고 있었습니다”)은 무슨 뜻일까요?</span></li>
+      <li class="q" data-opts="배 (Stomach)|배 (Pear)|배 (Boat)" data-answer="1" data-exp="감기에 걸려서 ‘아팠다’ → 몸의 배(Stomach)예요."><span class="stem">“열이 나고 <b>배</b>도 아팠습니다”에서 <b>배</b>의 뜻은?</span></li>
+      <li class="q" data-ox="1" data-opts="O|X" data-answer="2" data-exp="‘동생과 함께’ 눈싸움을 했어요."><span class="stem">주인공은 혼자서 눈싸움을 했어요. (O / X)</span></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ================= CH5 QUIZ ================= -->
+<section class="chapter" id="ch5">
+  <h2>제5장 퀴즈 <small>Quiz · 어휘와 문장 구성력, 문법을 확인해요 (화면에서는 눌러서 풀 수 있어요)</small></h2>
+
+  <div class="quiz-set" data-title="퀴즈 1. 같은 음, 다른 의미 찾기 (동음이의어)">
+    <div class="qhead"><h3>퀴즈 1. 같은 음, 다른 의미 찾기</h3><span class="score"></span><button class="reset" type="button">다시 풀기</button></div>
+    <p>문장 속 <b>밑줄 친 단어</b>의 뜻을 고르세요. <span class="en">(Choose the meaning used in the sentence.)</span></p>
+    <ol>
+      <li class="q" data-opts="배 (Stomach)|배 (Pear)|배 (Boat)" data-answer="1" data-exp="‘먹었더니 … 아파요’ → 몸의 배(Stomach)."><span class="stem">어제 매운 떡볶이를 먹었더니 <b>배</b>가 너무 아파요.</span></li>
+      <li class="q" data-opts="차 (Car)|차 (Tea)" data-answer="2" data-exp="‘마시다’ → 음료 차(Tea)."><span class="stem">감기에 걸렸을 때는 따뜻한 <b>차</b>를 마시는 것이 좋습니다.</span></li>
+      <li class="q" data-opts="눈 (Eye)|눈 (Snow)" data-answer="2" data-exp="‘내리고 있어요’ → 눈(Snow)."><span class="stem">밖을 보세요! 올겨울 첫 <b>눈</b>이 내리고 있어요.</span></li>
+      <li class="q" data-opts="배 (Stomach)|배 (Pear)|배 (Boat)" data-answer="3" data-exp="‘비행기 대신 … 타고’ → 배(Boat)."><span class="stem">제주도에 갈 때 비행기 대신 <b>배</b>를 타고 갔습니다.</span></li>
+      <li class="q" data-opts="차 (Car)|차 (Tea)" data-answer="1" data-exp="‘드라이브’ → 자동차(Car)."><span class="stem">아버지가 새로 <b>차</b>를 사셔서 함께 드라이브를 갔습니다.</span></li>
+      <li class="q" data-opts="눈 (Eye)|눈 (Snow)" data-answer="1" data-exp="‘읽다’, ‘나빠지다’ → 눈(Eye)."><span class="stem">책을 너무 어두운 곳에서 읽으면 <b>눈</b>이 나빠집니다.</span></li>
+      <li class="q" data-opts="배 (Stomach)|배 (Pear)|배 (Boat)" data-answer="2" data-exp="‘달콤하고 물이 많은’ → 과일 배(Pear)."><span class="stem">가을에는 달콤하고 물이 많은 <b>배</b>가 맛있습니다.</span></li>
+      <li class="q" data-opts="다리 (Leg)|다리 (Bridge)" data-answer="1" data-exp="‘걸어서 … 아파요’ → 몸의 다리(Leg)."><span class="stem">오래 걸어서 <b>다리</b>가 아파요.</span></li>
+      <li class="q" data-opts="다리 (Leg)|다리 (Bridge)" data-answer="2" data-exp="‘강’, ‘건너다’ → 다리(Bridge)."><span class="stem">한강에 새로 생긴 <b>다리</b>를 걸어서 건넜어요.</span></li>
+      <li class="q" data-opts="차 (Car)|차 (Tea)" data-answer="2" data-exp="‘끓이다’, ‘주셨어요’ → 차(Tea)."><span class="stem">어머니는 <b>차</b>를 끓여서 저에게 주셨어요.</span></li>
+    </ol>
+  </div>
+
+  <div class="quiz-set" data-title="퀴즈 2. 빈칸에 알맞은 단어 (눈·배·다리·차)">
+    <div class="qhead"><h3>퀴즈 2. 빈칸에 알맞은 단어는?</h3><span class="score"></span><button class="reset" type="button">다시 풀기</button></div>
+    <p>단서 말을 보고 ( ) 안에 알맞은 단어를 고르세요.</p>
+    <ol>
+      <li class="q" data-opts="눈|배|다리|차" data-answer="1" data-exp="‘하늘에서 내려요’ → 눈(Snow)."><span class="stem">겨울에는 하늘에서 하얀 ( ❓ )이 내려요.</span></li>
+      <li class="q" data-opts="눈|배|다리|차" data-answer="2" data-exp="‘바다를 건넜어요’ + ‘타고’ → 배(Boat)."><span class="stem">우리는 ( ❓ )를 타고 바다를 건넜어요.</span></li>
+      <li class="q" data-opts="눈|배|다리|차" data-answer="3" data-exp="‘오래 걸어서 아파요’ → 다리(Leg)."><span class="stem">너무 오래 걸어서 ( ❓ )가 아파요.</span></li>
+      <li class="q" data-opts="눈|배|다리|차" data-answer="4" data-exp="‘따뜻한 … 마셨어요’ → 차(Tea)."><span class="stem">아침에 따뜻한 ( ❓ )를 마셨어요.</span></li>
+      <li class="q" data-opts="눈|배|다리|차" data-answer="3" data-exp="‘건너면’ → 다리(Bridge)."><span class="stem">저 ( ❓ )를 건너면 우리 학교가 있어요.</span></li>
+      <li class="q" data-opts="눈|배|다리|차" data-answer="4" data-exp="‘막혀서 … 늦었어요’ → 차(Car)."><span class="stem">( ❓ )가 막혀서 약속에 늦었어요.</span></li>
+      <li class="q" data-opts="눈|배|다리|차" data-answer="2" data-exp="‘많이 먹어서 … 불러요’ → 배(Stomach)."><span class="stem">밥을 많이 먹어서 ( ❓ )가 불러요.</span></li>
+      <li class="q" data-opts="눈|배|다리|차" data-answer="1" data-exp="‘컴퓨터를 오래 봐서 … 아파요’ → 눈(Eye)."><span class="stem">컴퓨터를 오래 봐서 ( ❓ )이 아파요.</span></li>
+    </ol>
+  </div>
+
+  <div class="quiz-set" data-title="퀴즈 3. 문법 -아/어서 바르게 쓰기">
+    <div class="qhead"><h3>퀴즈 3. ‘-아/어서’ 바르게 쓰기</h3><span class="score"></span><button class="reset" type="button">다시 풀기</button></div>
+    <ol>
+      <li class="q" data-opts="추워서|춥아서|추웠어서" data-answer="1" data-exp="춥다 → 추워서 (ㅂ이 바뀌어요). ‘-았/었-’은 쓰지 않아요."><span class="stem">날씨가 ( ❓ ) 두꺼운 옷을 입었어요.</span></li>
+      <li class="q" data-opts="아프어서|아파서|아팠어서" data-answer="2" data-exp="아프다 → ‘ㅡ’가 빠지고 앞 모음 ㅏ → 아파서."><span class="stem">배가 ( ❓ ) 병원에 갔어요.</span></li>
+      <li class="q" data-opts="하서|해서|했어서" data-answer="2" data-exp="‘하다’로 끝나면 → 해서."><span class="stem">피곤( ❓ ) 일찍 잤어요.</span></li>
+      <li class="q" data-opts="먹아서|먹어서|먹았어서" data-answer="2" data-exp="먹- 의 마지막 모음 ㅓ → -어서."><span class="stem">밥을 많이 ( ❓ ) 배가 불러요.</span></li>
+      <li class="q" data-opts="와서|오어서|왔어서" data-answer="1" data-exp="오다 → 오 + 아서 → 와서."><span class="stem">눈이 ( ❓ ) 길이 미끄러워요.</span></li>
+      <li class="q" data-opts="걸려서|걸리아서|걸렸어서" data-answer="1" data-exp="걸리다 → 걸리 + 어서 → 걸려서."><span class="stem">감기에 ( ❓ ) 학교에 못 갔어요.</span></li>
+      <li class="q" data-opts="비가 와서 우산을 샀어요.|피곤해서 쉬었어요.|비가 와서 우산을 쓰세요." data-answer="3" data-exp="‘-아/어서’ 뒤에는 명령(-(으)세요)을 쓸 수 없어요. “비가 와요. 그러니까 우산을 쓰세요.”"><span class="stem"><b>틀린</b> 문장을 고르세요.</span></li>
+    </ol>
+  </div>
+
+  <div class="quiz-set" data-title="퀴즈 4. O / X 개념 확인">
+    <div class="qhead"><h3>퀴즈 4. O / X 개념 확인</h3><span class="score"></span><button class="reset" type="button">다시 풀기</button></div>
+    <ol>
+      <li class="q" data-ox="1" data-opts="O|X" data-answer="2" data-exp="차는 Car와 Tea 두 가지 뜻이 있어요."><span class="stem">‘차’는 ‘자동차’의 뜻만 있어요.</span></li>
+      <li class="q" data-ox="1" data-opts="O|X" data-answer="1" data-exp="신체(Stomach), 과일(Pear), 탈것(Boat) 세 가지예요."><span class="stem">‘배’에는 세 가지 뜻이 있어요.</span></li>
+      <li class="q" data-ox="1" data-opts="O|X" data-answer="1" data-exp="Leg와 Bridge."><span class="stem">‘다리’는 몸의 다리와 강을 건너는 다리, 두 가지 뜻이 있어요.</span></li>
+      <li class="q" data-ox="1" data-opts="O|X" data-answer="2" data-exp="‘-아/어서’ 앞에는 과거형을 쓰지 않아요. → 비가 와서 …"><span class="stem">“비가 왔어서 집에 있었어요.”는 맞는 문장이에요.</span></li>
+      <li class="q" data-ox="1" data-opts="O|X" data-answer="1" data-exp="‘-아/어서’는 이유·원인을 나타내요."><span class="stem">‘-아/어서’는 앞의 말이 뒤의 말의 이유가 될 때 써요.</span></li>
+      <li class="q" data-ox="1" data-opts="O|X" data-answer="1" data-exp="공부하다 → 공부해서."><span class="stem">‘공부하다’는 ‘공부해서’가 돼요.</span></li>
+    </ol>
+  </div>
+
+  <div class="quiz-set" data-title="퀴즈 5. 문장 순서 배열 (문장 구성력)">
+    <div class="qhead"><h3>퀴즈 5. 낱말을 순서대로 놓아 문장 만들기</h3><span class="score"></span><button class="reset" type="button">다시 풀기</button></div>
+    <p>섞여 있는 낱말을 <b>순서대로</b> 눌러 문장을 만드세요. (인쇄할 때는 아래 줄에 직접 써요.) <span class="en">이유(-아/어서) 문장이 먼저, 결과 문장이 나중에 와요.</span></p>
+    <ol>
+      <li class="ord" data-chips="비가|와서|우산을|썼어요" data-answer="비가 와서 우산을 썼어요."></li>
+      <li class="ord" data-chips="배가|아파서|병원에|갔어요" data-answer="배가 아파서 병원에 갔어요."></li>
+      <li class="ord" data-chips="눈이|많이|와서|차가|막혀요" data-answer="눈이 많이 와서 차가 막혀요."></li>
+      <li class="ord" data-chips="다리가|아파서|의자에|앉았어요" data-answer="다리가 아파서 의자에 앉았어요."></li>
+      <li class="ord" data-chips="차를|마셔서|몸이|따뜻해요" data-answer="차를 마셔서 몸이 따뜻해요."></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ================= APPENDIX ================= -->
+<section class="chapter" id="app">
+  <h2>부록 <small>Appendix</small></h2>
+
+  <h3>부록 1. 맞춤법 · 띄어쓰기 연습</h3>
+  <div class="concept">
+    <p>한국어는 띄어쓰기를 잘해야 뜻이 정확하게 전달돼요. <b>① 낱말(명사·동사 등)은 띄어 써요. ② 조사(이/가, 을/를, 은/는, 에, 도 …)는 앞말에 붙여 써요.</b> 예) 눈이 / 많이 / 와서 / 차를 / 탔어요.</p>
+  </div>
+  <div class="work">
+    <p>띄어쓰기가 안 된 문장을 알맞게 띄어서 다시 써 보세요.</p>
+    <ol>
+      <li>오늘은눈이많이와서차가막혔습니다.<br>➡️ <input class="line" type="text"></li>
+      <li>동생이너무많이뛰어서다리가아프다고말했습니다.<br>➡️ <input class="line" type="text"></li>
+      <li>식사후에따뜻한차를마시며맛있는배를먹었습니다.<br>➡️ <input class="line" type="text"></li>
+      <li>어제는배가아파서병원에갔습니다.<br>➡️ <input class="line" type="text"></li>
+    </ol>
+  </div>
+
+  <h3>부록 2. 더 알아보기 — 다른 동음이의어</h3>
+  <div class="more-grid">
+    <div class="m"><div class="w">밤</div>🌙 night · 🌰 chestnut<br><span class="en">밤이 깊었어요. / 밤을 구웠어요.</span></div>
+    <div class="m"><div class="w">말</div>🐴 horse · 💬 speech, words<br><span class="en">말을 타요. / 말을 잘해요.</span></div>
+    <div class="m"><div class="w">병</div>🍼 bottle · 🤒 illness<br><span class="en">병에 물을 담았어요. / 병이 나았어요.</span></div>
+  </div>
+  <p class="tip">🔎 <b>숙제:</b> 집이나 우리 동네에서 ‘소리는 같고 뜻이 다른 말’을 2개 찾아 문장으로 써 오세요.</p>
+
+  <h3>부록 3. 이번 주 학습 점검표 <span class="en">Can-do checklist</span></h3>
+  <ul class="check">
+    <li>‘눈, 배, 다리, 차’의 뜻을 모두 말할 수 있어요.</li>
+    <li>문장의 단서 말을 보고 알맞은 뜻을 고를 수 있어요.</li>
+    <li>‘-아서 / -어서 / -해서’를 규칙대로 만들 수 있어요.</li>
+    <li>‘-아/어서’ 앞에는 과거형을, 뒤에는 명령형을 쓰지 않아요.</li>
+    <li>이유를 넣어 내 문장을 말하고 쓸 수 있어요.</li>
+  </ul>
+
+  <!-- teacher only -->
+  <div class="teacher-only">
+    <h3>👩‍🏫 교사용 수업 운영안 (50~60분)</h3>
+    <table>
+      <tr><th>시간</th><th>단계</th><th>활동</th></tr>
+      <tr><td>5′</td><td>도입</td><td>그림 카드(👁️🍐⛴️🌉🚗🍵)를 보여 주고 “이게 뭐예요?” → 같은 소리 발견하기</td></tr>
+      <tr><td>15′</td><td>어휘(1장)</td><td>동음이의어 개념 → 3단계 찾기 → 단서 말 짝꿍 → 어휘 확인 1</td></tr>
+      <tr><td>10′</td><td>문장(2장)</td><td>소리 내어 읽기 → 짝꿍 말 문장 → 나만의 문장 → 짝 활동</td></tr>
+      <tr><td>15′</td><td>문법(3장)</td><td>원인→결과 그림 → 3단계 규칙 → 변화표 → 3가지 약속 → 연습/말하기</td></tr>
+      <tr><td>10′</td><td>읽기(4장)</td><td>범독 → 문맥 단서로 눈·배·차 뜻 찾기 → 이해 확인</td></tr>
+      <tr><td>5′+</td><td>퀴즈(5장)</td><td>화면 퀴즈 또는 인쇄물. 틀린 문항은 ‘단서 말’을 찾아 함께 설명</td></tr>
+    </table>
+    <p class="tip">💡 헤리티지 학습자는 말하기는 유창해도 <b>띄어쓰기·받침·조사</b>에서 자주 틀려요. 부록 1을 매주 반복해 주세요. 영어 해설은 이해를 돕는 보조 수단이므로 점차 줄여 가세요.</p>
+  </div>
+
+  <!-- answer key -->
+  <div class="answer-key" id="key">
+    <h3>📝 정답 및 해설</h3>
+    <h4>제1장 어휘 확인 1</h4>
+    <p>눈 · 눈 · 배 · 배 · 다리 · 다리 · 차 · 차 (그림 순서대로)</p>
+    <h4>제2장 짝꿍 말 연결 (예시 답)</h4>
+    <ol>
+      <li>눈이 내려요. / 눈이 와요.</li>
+      <li>배를 탔어요. / 배를 타요.</li>
+      <li>다리를 건너요. / 다리를 건넜어요.</li>
+      <li>차를 마셔요. / 차를 마셨어요.</li>
+    </ol>
+    <h4>제3장 문법 연습 1</h4>
+    <ol>
+      <li>날씨가 추워서 두꺼운 옷을 입었어요.</li>
+      <li>눈이 많이 와서 차가 막혀요.</li>
+      <li>배가 아파서 병원에 갔어요.</li>
+      <li>다리가 아파서 의자에 앉았어요.</li>
+      <li>피곤해서 일찍 잤어요.</li>
+    </ol>
+    <p>연습 2·말하기·나만의 문장: 학습자 답에 따라 다름. <b>점검 포인트</b> — ① 앞 절에 과거형이 없는지 ② ‘-아/어서’ 형태가 맞는지 ③ 조사를 붙여 썼는지.</p>
+    <h4>제4장 읽기 (쓰기)</h4>
+    <ol>
+      <li>너무 오래 밖에서 놀아서 감기에 걸렸어요.</li>
+      <li>따뜻한 유자차를 주셨어요.</li>
+    </ol>
+    <h4>부록 1 띄어쓰기</h4>
+    <ol>
+      <li>오늘은 눈이 많이 와서 차가 막혔습니다.</li>
+      <li>동생이 너무 많이 뛰어서 다리가 아프다고 말했습니다.</li>
+      <li>식사 후에 따뜻한 차를 마시며 맛있는 배를 먹었습니다.</li>
+      <li>어제는 배가 아파서 병원에 갔습니다.</li>
+    </ol>
+    <div id="autokey"></div>
+  </div>
+
+  <footer>재외동포 한국어 2 · 1주 차 교재 · 동음이의어(눈·배·다리·차) / 문법 -아/어서</footer>
+</section>
+
+</div>
+
+<script>
+(function(){
+  var CIRC = ['①','②','③','④','⑤'];
+
+  function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;'); }
+
+  /* ---- build / rebuild one quiz set ---- */
+  function initSet(set){
+    set.querySelectorAll('.opts,.fb,.ord-ui').forEach(function(n){ n.remove(); });
+    var items = set.querySelectorAll('li.q, li.ord');
+    set._right = 0; set._done = 0;
+    items.forEach(function(li){
+      li.classList.remove('done','right','wrong');
+      if (li.classList.contains('q')) buildMcq(set, li); else buildOrd(set, li);
+    });
+    updateScore(set);
+  }
+
+  function updateScore(set){
+    var total = set.querySelectorAll('li.q, li.ord').length;
+    var el = set.querySelector('.score');
+    el.textContent = set._done ? ('정답 ' + set._right + ' / ' + total) : ('총 ' + total + '문제');
+  }
+
+  function finish(set, li, ok, msg){
+    li.classList.add('done', ok ? 'right' : 'wrong');
+    set._done++; if (ok) set._right++;
+    li.querySelector('.fb').textContent = (ok ? '⭕ 정답! ' : '❌ 아쉬워요. ') + msg;
+    updateScore(set);
+  }
+
+  function buildMcq(set, li){
+    var opts = li.dataset.opts.split('|');
+    var ox = li.dataset.ox === '1';
+    var ans = parseInt(li.dataset.answer, 10);
+    var wrap = document.createElement('div'); wrap.className = 'opts';
+    var fb = document.createElement('div'); fb.className = 'fb';
+    opts.forEach(function(t, i){
+      var b = document.createElement('button');
+      b.type = 'button'; b.className = 'opt';
+      b.innerHTML = (ox ? '' : '<span class="n">' + CIRC[i] + '</span>') + esc(t);
+      b.addEventListener('click', function(){
+        if (li.classList.contains('done')) return;
+        var ok = (i + 1) === ans;
+        wrap.querySelectorAll('.opt').forEach(function(o, j){
+          o.disabled = true;
+          if (j + 1 === ans) o.classList.add('correct');
+        });
+        b.classList.add('picked'); if (!ok) b.classList.add('wrongpick');
+        finish(set, li, ok, li.dataset.exp || '');
+      });
+      wrap.appendChild(b);
+    });
+    li.appendChild(wrap); li.appendChild(fb);
+  }
+
+  function buildOrd(set, li){
+    var chips = li.dataset.chips.split('|').slice().reverse(); // scrambled deterministically
+    var answer = li.dataset.answer;
+    var ui = document.createElement('div'); ui.className = 'ord-ui';
+    var chipBox = document.createElement('div'); chipBox.className = 'chips';
+    var built = document.createElement('div'); built.className = 'built';
+    var ctl = document.createElement('div'); ctl.className = 'ordctl';
+    var check = document.createElement('button'); check.type = 'button'; check.className = 'ordbtn'; check.textContent = '확인';
+    var clear = document.createElement('button'); clear.type = 'button'; clear.className = 'ordbtn'; clear.textContent = '지우기';
+    var fb = document.createElement('div'); fb.className = 'fb';
+    var picked = [];
+    chips.forEach(function(t){
+      var c = document.createElement('button'); c.type = 'button'; c.className = 'chip'; c.textContent = t;
+      c.addEventListener('click', function(){
+        if (li.classList.contains('done')) return;
+        picked.push(t); c.disabled = true; built.textContent = picked.join(' ');
+      });
+      chipBox.appendChild(c);
+    });
+    clear.addEventListener('click', function(){
+      if (li.classList.contains('done')) return;
+      picked = []; built.textContent = '';
+      chipBox.querySelectorAll('.chip').forEach(function(c){ c.disabled = false; });
+    });
+    check.addEventListener('click', function(){
+      if (li.classList.contains('done') || picked.length < chips.length) return;
+      var ok = (picked.join(' ') + '.') === answer;
+      chipBox.querySelectorAll('.chip').forEach(function(c){ c.disabled = true; });
+      finish(set, li, ok, ok ? '' : '정답: ' + answer);
+    });
+    ctl.appendChild(check); ctl.appendChild(clear);
+    ui.appendChild(chipBox); ui.appendChild(built); ui.appendChild(ctl); ui.appendChild(fb);
+    li.appendChild(ui);
+    // keep .fb reachable as li.querySelector('.fb')
+  }
+
+  /* ---- auto-generate answer key from quiz data ---- */
+  function buildKey(){
+    var out = '';
+    document.querySelectorAll('.quiz-set').forEach(function(set){
+      out += '<h4>' + esc(set.dataset.title) + '</h4><ol>';
+      set.querySelectorAll('li.q, li.ord').forEach(function(li){
+        if (li.classList.contains('q')){
+          var opts = li.dataset.opts.split('|'), a = parseInt(li.dataset.answer, 10);
+          var label = li.dataset.ox === '1' ? opts[a-1] : (CIRC[a-1] + ' ' + opts[a-1]);
+          out += '<li><b>' + esc(label) + '</b> — ' + esc(li.dataset.exp || '') + '</li>';
+        } else {
+          out += '<li>' + esc(li.dataset.answer) + '</li>';
+        }
+      });
+      out += '</ol>';
+    });
+    document.getElementById('autokey').innerHTML = out;
+  }
+
+  document.querySelectorAll('.quiz-set').forEach(function(set){
+    initSet(set);
+    set.querySelector('.reset').addEventListener('click', function(){ initSet(set); });
+  });
+  buildKey();
+
+  /* ---- toolbar ---- */
+  var body = document.body;
+  document.getElementById('btnKey').addEventListener('click', function(){ body.classList.toggle('show-key'); });
+  document.getElementById('btnPrintStudent').addEventListener('click', function(){
+    body.classList.remove('show-key'); window.print();
+  });
+  document.getElementById('btnPrintTeacher').addEventListener('click', function(){
+    body.classList.add('show-key'); window.print();
+  });
+})();
+</script>
+</body>
+</html>
