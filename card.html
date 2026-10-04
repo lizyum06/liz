@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Liz Yum — Business Card</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Noto+Sans+KR:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root { --navy: #14233a; --gold: #b08d4c; --cream: #f7f4ec; --muted: #6d7280; }
+    * { box-sizing: border-box; }
+    body { margin: 0; padding: 32px 16px; background: #e9e6dd; display: grid; gap: 28px; justify-items: center;
+           font-family: "Noto Sans KR", "Apple SD Gothic Neo", sans-serif; }
+    .note { max-width: 1050px; width: 100%; color: #55596a; font-size: 14px; line-height: 1.6; word-break: keep-all; }
+    /* 3.5 x 2 in at 300 dpi = 1050 x 600 px */
+    .card { width: 1050px; height: 600px; position: relative; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,.18); flex: none; }
+    .wrap { width: 100%; display: grid; justify-items: center; overflow-x: auto; }
+    .front { background: var(--navy); display: grid; place-items: center; }
+    .front::after { content: ""; position: absolute; inset: 24px; border: 1px solid rgba(176,141,76,.55); pointer-events: none; }
+    .front img { width: 600px; }
+    .back { background: var(--cream); color: var(--navy); padding: 58px 64px; }
+    .back::after { content: ""; position: absolute; inset: 24px; border: 1px solid rgba(176,141,76,.55); pointer-events: none; }
+    .name { font: 600 56px/1 "Cinzel", serif; letter-spacing: .06em; margin: 0; }
+    .role { font: 500 17px/1 "Cinzel", serif; letter-spacing: .22em; color: var(--gold); margin: 20px 0 6px; }
+    .role-ko { font-size: 15px; color: var(--muted); margin: 0; }
+    .rule { display: flex; align-items: center; gap: 12px; width: 420px; margin: 26px 0 24px; }
+    .rule::before, .rule::after { content: ""; flex: 1; height: 1.5px; background: var(--gold); }
+    .rule i { width: 9px; height: 9px; background: var(--gold); transform: rotate(45deg); }
+    .roles { list-style: none; padding: 0; margin: 0; font-size: 18px; line-height: 1.55; }
+    .roles b { font-weight: 500; }
+    .roles span { color: var(--muted); }
+    .contact { position: absolute; left: 64px; bottom: 56px; font-size: 15px; line-height: 1.7; color: var(--navy); }
+    .mono { position: absolute; right: 64px; top: 46px; width: 190px; }
+    .tagline { position: absolute; right: 64px; bottom: 56px; font: 500 11px/1 "Cinzel", serif; letter-spacing: .28em; color: var(--muted); }
+  </style>
+</head>
+<body>
+  <p class="note"><b>명함 시안</b> (3.5 × 2 in, 300 dpi 기준 1050 × 600 px). 이메일·전화번호·주소는 예시이니 실제 정보로 바꿔 주세요. 인쇄용 이미지는 <code>logo/card-front.png</code>, <code>logo/card-back.png</code>를 사용하세요.</p>
+
+  <div class="wrap"><div class="card front" id="front">
+    <img src="logo/scholar-logo-dark.svg" alt="The Scholar Edu — Global Education Consulting">
+  </div></div>
+
+  <div class="wrap"><div class="card back" id="back">
+    <h1 class="name">Liz Yum</h1>
+    <p class="role">CAREER &amp; EDUCATION MENTOR</p>
+    <p class="role-ko">진로·교육 멘토</p>
+    <div class="rule"><i></i></div>
+    <ul class="roles">
+      <li><b>The Scholar Edu</b> <span>· 대표</span></li>
+      <li><b>Korean Language School</b> <span>· 이중언어반 교사</span></li>
+      <li><b>호주한인상공회의소</b> <span>· 사무행정 지원</span></li>
+    </ul>
+    <div class="contact">email@example.com<br>+61 4XX XXX XXX<br>Sydney, NSW, Australia</div>
+    <img class="mono" src="logo/scholar-monogram-light.svg" alt="TS monogram">
+    <div class="tagline">BETTER EDUCATION. BRIGHTER FUTURES.</div>
+  </div></div>
+</body>
+</html>
