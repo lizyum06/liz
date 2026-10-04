@@ -66,8 +66,7 @@ Object.keys(INTERESTS).forEach((key) => {
 });
 render();
 
-// TODO: 본인 이메일 주소로 바꿔 주세요.
-const CONTACT_EMAIL = "hello@example.com";
+const CONTACT_EMAIL = "info@thescholaredu.com";
 
 document.getElementById("contact-form").addEventListener("submit", (e) => {
   e.preventDefault();
