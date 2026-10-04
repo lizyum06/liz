@@ -16,9 +16,11 @@
     /* 3.5 x 2 in at 300 dpi = 1050 x 600 px */
     .card { width: 1050px; height: 600px; position: relative; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,.18); flex: none; }
     .wrap { width: 100%; display: grid; justify-items: center; overflow-x: auto; }
-    .front { background: var(--navy); display: grid; place-items: center; }
+    .front { background: var(--navy); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; }
+    .ko-line { margin: 0; color: var(--cream); font-size: 19px; letter-spacing: .12em; text-align: center; }
+    .ko-line b { font-weight: 500; color: var(--gold); margin-right: 10px; }
     .front::after { content: ""; position: absolute; inset: 24px; border: 1px solid rgba(176,141,76,.55); pointer-events: none; }
-    .front img { width: 600px; }
+    .front img { width: 560px; }
     .back { background: var(--cream); color: var(--navy); padding: 58px 64px; }
     .back::after { content: ""; position: absolute; inset: 24px; border: 1px solid rgba(176,141,76,.55); pointer-events: none; }
     .name { font: 600 56px/1 "Cinzel", serif; letter-spacing: .06em; margin: 0; }
@@ -40,6 +42,7 @@
 
   <div class="wrap"><div class="card front" id="front">
     <img src="logo/scholar-logo-dark.svg" alt="The Scholar Edu — Global Education Consulting">
+    <p class="ko-line"><b>더 스칼라 에듀</b>진로교육 · 글로벌교육 컨설팅</p>
   </div></div>
 
   <div class="wrap"><div class="card back" id="back">
@@ -48,7 +51,7 @@
     <p class="role-ko">진로·교육 멘토</p>
     <div class="rule"><i></i></div>
     <ul class="roles">
-      <li><b>The Scholar Edu</b> <span>· 대표</span></li>
+      <li><b>더 스칼라 에듀 The Scholar Edu</b> <span>· 대표</span></li>
       <li><b>Korean Language School</b> <span>· 이중언어반 교사</span></li>
       <li><b>호주한인상공회의소</b> <span>· 사무행정 지원</span></li>
     </ul>
