@@ -72,7 +72,7 @@ const CONTACT_EMAIL = "hello@example.com";
 document.getElementById("contact-form").addEventListener("submit", (e) => {
   e.preventDefault();
   const data = new FormData(e.target);
-  const subject = encodeURIComponent(`[DALK꿈 문의] ${data.get("name")}`);
+  const subject = encodeURIComponent(`[The Scholar Edu 문의] ${data.get("name")}`);
   const body = encodeURIComponent(data.get("message"));
   location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
 });
