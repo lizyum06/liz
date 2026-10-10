@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&display=swap" rel="stylesheet">
   <link rel="icon" type="image/svg+xml" href="logo/scholar-monogram-light.svg">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="matching.css">
 </head>
 <body>
   <header class="site-header">
@@ -19,8 +20,7 @@
     </a>
     <nav aria-label="주요 메뉴">
       <a href="#approach">철학</a>
-      <a href="#experiences">경험</a>
-      <a href="#discover">테스트</a>
+      <a href="#discover">진로탐색·매칭</a>
       <a href="#program">프로그램</a>
       <a href="#mentor">멘토</a>
       <a href="#contact">문의</a>
@@ -35,7 +35,7 @@
       <p class="lead">We connect young people with real-world experiences, mentors and educational pathways in Australia — helping them discover what they enjoy, what they are good at, and where they might belong.</p>
       <p class="lead-ko">진로를 “고르기” 전에 먼저 “경험”해 보세요. 호주의 학교·대학·현장·멘토를 직접 만나며 나에게 맞는 길을 찾는 프로그램입니다.</p>
       <div class="actions">
-        <a class="btn primary" href="#experiences">Explore Experiences</a>
+        <a class="btn primary" href="#program">Explore Programs</a>
         <a class="btn" href="#mentor">Meet a Mentor</a>
         <a class="btn" href="#discover">Discover Your Pathway</a>
       </div>
@@ -53,41 +53,17 @@
       </ol>
     </section>
 
-    <section id="experiences" class="section">
-      <h2>Experiences</h2>
-      <p class="section-lead">한 가지 직업을 “설명”이 아니라 “하루”로 만나 보세요.</p>
-      <div class="tiles">
-        <article class="tile t1">
-          <span class="kicker">A School</span>
-          <h3>호주 학교에서 프로젝트를</h3>
-          <p>학교 프로그램과 기숙사 생활을 경험하며 호주 교실의 문화를 만납니다.</p>
-        </article>
-        <article class="tile t2">
-          <span class="kicker">A University</span>
-          <h3>캠퍼스에서 학과를 체험</h3>
-          <p>캠퍼스 방문과 학과 워크숍으로 대학 공부를 미리 맛봅니다.</p>
-        </article>
-        <article class="tile t3">
-          <span class="kicker">An Industry</span>
-          <h3>실제 직업 현장 탐방</h3>
-          <p>연구시설, 인프라, 공공기관 등 일이 일어나는 곳을 직접 봅니다.</p>
-        </article>
-        <article class="tile t4">
-          <span class="kicker">A Mentor</span>
-          <h3>현직자와의 대화</h3>
-          <p>“의사가 되고 싶어요”라면 의대생, 의사, 의료 전문가를 직접 만납니다.</p>
-        </article>
-      </div>
-      <p class="note">사진은 준비 중입니다. 실제 프로그램 사진으로 교체될 예정입니다.</p>
-    </section>
-
     <section id="discover" class="section">
-      <h2>5분 Self-Discovery</h2>
-      <p class="section-lead">검사 → 진로 결정이 아니라, 간단한 탐색 → 경험 추천. 끌리는 것을 골라 보세요. (최대 3개)</p>
-      <div id="chips" class="chips" role="group" aria-label="관심사 선택"></div>
-      <div id="result" class="result" aria-live="polite">
-        <p class="muted">관심사를 선택하면 추천 경험이 여기에 나타납니다.</p>
-      </div>
+      <h2>진로탐색 &amp; 매칭 <span class="en-sub">Career Discovery &amp; Matching</span></h2>
+      <p class="section-lead">무료 진로 흥미 검사를 한 뒤 결과 코드를 입력하면, 어울리는 직업군과 프로그램을 연결해 드립니다.</p>
+      <ol class="flow">
+        <li><b>검사하기</b><span>무료 흥미 검사(O*NET Interest Profiler)로 나의 흥미 유형을 확인합니다.</span>
+          <a class="btn" href="https://www.mynextmove.org/explore/ip" target="_blank" rel="noopener">검사 바로가기 (영어)</a></li>
+        <li><b>결과 입력</b><span>점수가 높은 순서대로 유형 3개를 아래에서 고릅니다. 검사를 아직 안 했다면 설명을 읽고 끌리는 유형을 골라도 됩니다.</span></li>
+        <li><b>매칭 확인</b><span>어울리는 직업군과 연결되는 프로그램을 확인합니다.</span></li>
+      </ol>
+      <div id="matcher" class="matcher"></div>
+      <p class="note">샘플입니다. 직업군 매칭은 홀랜드(RIASEC) 흥미 유형에 따른 일반적인 분류이며, 진로를 결정해 주는 결과가 아닙니다. 검사 결과를 자동으로 가져오는 정식 연동은 준비 중입니다.</p>
     </section>
 
     <section id="program" class="section">
@@ -121,30 +97,6 @@
 
       <p class="note">프로그램은 개발 중이며, 일정·장소·참가 조건은 각 기관 및 학교의 정책과 협의 결과에 따라 달라질 수 있습니다.</p>
 
-      <h3 class="sub">My Australian Future Portfolio</h3>
-      <p>프로그램이 끝나면 수료증 한 장이 아니라, 학생 자신의 기록을 가지고 돌아갑니다.</p>
-      <ul class="portfolio">
-        <li>What I experienced <small>내가 경험한 것</small></li>
-        <li>What surprised me <small>예상과 달랐던 것</small></li>
-        <li>What I enjoyed <small>재미있었던 것</small></li>
-        <li>What I was good at <small>내가 잘했던 것</small></li>
-        <li>What I want to know more about <small>더 알고 싶은 것</small></li>
-        <li>Who I met <small>만난 전문가</small></li>
-        <li>What I want to try next <small>다음 경험</small></li>
-        <li>My possible pathway <small>가능한 진로 경로</small></li>
-      </ul>
-    </section>
-
-    <section id="explore-list" class="section">
-      <h2>함께 알아보고 있는 경험 분야</h2>
-      <p class="section-lead">아래는 학생 체험 프로그램을 운영하거나 협력을 제안해 볼 만한 기관·분야의 <b>후보</b>입니다. 확정된 파트너십이 아니며, 외부·국제 학생의 참여 가능 여부는 기관별로 확인 중입니다.</p>
-      <div class="cards">
-        <article class="card"><h3>Infrastructure &amp; Technology</h3><p>Sydney Metro · WaterNSW / Warragamba Dam · Engineers Australia</p></article>
-        <article class="card"><h3>Science &amp; Health</h3><p>ANSTO · CSIRO · Australian Museum</p></article>
-        <article class="card"><h3>Environment &amp; Energy</h3><p>Sydney Water · Field of Mars EEC · Taronga Zoo</p></article>
-        <article class="card"><h3>Future Careers &amp; Industry</h3><p>Powerhouse Parramatta · NSW Parliament · Observatory Hill EEC · 대학 아웃리치</p></article>
-        <article class="card"><h3>School &amp; Boarding</h3><p>시드니 사립학교 boarding 프로그램과의 협력 논의</p></article>
-      </div>
     </section>
 
     <section id="mentor" class="section">
@@ -184,6 +136,7 @@
     <p>© <span id="year"></span> 더 스칼라 에듀 The Scholar Edu · Liz Yum. All rights reserved.</p>
   </footer>
 
+  <script src="matching.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

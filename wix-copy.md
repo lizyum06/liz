@@ -8,11 +8,11 @@
 2. **사이트 이름과 제목 구분**: 대시보드의 **사이트 이름은 관리용(liz)**입니다. 방문자에게 보이는 제목은 SEO 설정의 ‘사이트 제목’(위 0번 문구)에서 정합니다.
 3. **색상 · 글꼴 설정**: 사이트 디자인에서 색을 네이비 `#14233a`, 골드 `#b08d4c`, 크림 `#f7f4ec`로 정합니다. 본문 글꼴은 Wix의 한글 지원 고딕(예: Noto Sans KR 계열)을 고릅니다.
 4. **로고 업로드**: 미디어 관리자에 `logo/` 폴더 이미지를 올립니다. 헤더는 `scholar-horizontal-light`, 푸터는 `scholar-logo-light`, 파비콘은 `scholar-monogram-light` 를 씁니다.
-5. **페이지 구조**: 한 페이지 사이트(홈) + 앵커 메뉴를 권합니다. 위 1번 메뉴 6개를 각 섹션(스트립)에 연결합니다.
-6. **섹션별 문구 붙여넣기**: 이 문서의 2~11번을 위에서 아래 순서대로 붙여 넣습니다. 한글·영문을 함께 보여 줄 문장은 줄바꿈으로 나란히 두면 됩니다.
-7. **관심사 테스트 넣기**: Add → Embed Code → Embed HTML → Code 탭에 `embed/self-discovery.html` 파일 전체를 붙여 넣습니다. 상자 높이는 데스크톱 약 520px, 모바일 약 640px로 시작해 맞춥니다. 영문은 코드 맨 위 `const LANG = "ko"`를 `"en"`으로 바꿉니다.
-8. **문의 폼**: Add → Contact & Forms(연락처/폼)에서 문의 폼을 넣고, 필드는 이름 · 이메일 · 문의 내용(10번)으로 맞춥니다. 알림 받을 이메일을 `info@thescholaredu.com` 으로 설정하고, 폼을 직접 한 번 제출해 메일이 오는지 확인합니다.
-9. **이미지 교체**: 체험 카드 4개와 히어로에 구매한 이미지를 올립니다. 사용 허용 범위(웹사이트·상업 이용)를 구매 전에 확인합니다.
+5. **페이지 구조**: 한 페이지 사이트(홈) + 앵커 메뉴를 권합니다. 위 1번 메뉴 5개를 각 섹션(스트립)에 연결합니다.
+6. **섹션별 문구 붙여넣기**: 이 문서의 2~8번을 위에서 아래 순서대로 붙여 넣습니다. 한글·영문을 함께 보여 줄 문장은 줄바꿈으로 나란히 두면 됩니다.
+7. **진로탐색 & 매칭 넣기**: 문구(4번)로 제목·설명·3단계 카드를 만들고, 그 아래에 Add → Embed Code → Embed HTML → Code 탭을 열어 `embed/career-matching.html` 파일 전체를 붙여 넣습니다. 상자 높이는 데스크톱 약 1100px, 모바일 약 1700px로 시작해 맞춥니다(결과가 가장 길게 나올 때 기준). 영문은 코드 맨 아래 `lang: "ko"`를 `"en"`으로 바꾸고, `contactHref`·`programHref`에는 Wix 사이트 주소(예: `https://내사이트주소/#contact`)를 넣습니다.
+8. **문의 폼**: Add → Contact & Forms(연락처/폼)에서 문의 폼을 넣고, 필드는 이름 · 이메일 · 문의 내용(7번)으로 맞춥니다. 알림 받을 이메일을 `info@thescholaredu.com` 으로 설정하고, 폼을 직접 한 번 제출해 메일이 오는지 확인합니다.
+9. **이미지 교체**: 히어로와 멘토 프로필에 사용할 이미지를 올립니다. 사용 허용 범위(웹사이트·상업 이용)를 구매 전에 확인합니다.
 10. **모바일 확인**: 상단의 모바일 보기로 전환해 글 줄바꿈, 버튼, 임베드 상자 높이를 확인합니다. 모바일은 따로 조정이 필요합니다.
 11. **SEO · 공유 이미지**: SEO 설정에 0번 제목·설명을 넣고, 소셜 공유 이미지에는 세로형 로고(`scholar-logo-dark.png`)나 대표 사진을 지정합니다.
 12. **한글/영문 두 언어**: 두 언어 사이트가 필요하면 Wix의 다국어(Multilingual) 기능을 사용합니다. 이 문서의 영문 열을 영어 페이지에 붙여 넣으면 됩니다. 사용 조건과 요금은 Wix 안내에서 확인하세요.
@@ -35,11 +35,10 @@ _Editor → Menu (앵커 메뉴로 각 섹션에 연결)_
 | 항목 | 한글 | English |
 |---|---|---|
 | 메뉴 1 | 철학 | Our Approach |
-| 메뉴 2 | 경험 | Experiences |
-| 메뉴 3 | 탐색 테스트 | Discover |
-| 메뉴 4 | 프로그램 | Program |
-| 메뉴 5 | 멘토 | Mentor |
-| 메뉴 6 | 문의 | Contact |
+| 메뉴 2 | 진로탐색·매칭 | Discovery & Matching |
+| 메뉴 3 | 프로그램 | Programs |
+| 메뉴 4 | 멘토 | Mentor |
+| 메뉴 5 | 문의 | Contact |
 
 ## 2. 히어로 (첫 화면)
 _스트립 1 · 작은 글씨 + 큰 제목 + 설명 + 버튼 3개_
@@ -50,9 +49,9 @@ _스트립 1 · 작은 글씨 + 큰 제목 + 설명 + 버튼 3개_
 | 큰 제목 (2줄) | 당신의 미래는 밖에 있습니다.<br>직접 경험해 보세요. | Your future is out there.<br>Go experience it. |
 | 설명 1 | 호주의 실제 경험, 멘토, 교육 경로를 연결해 학생이 무엇을 좋아하고, 무엇을 잘하며, 어디에 어울리는지 스스로 발견하도록 돕습니다. | We connect young people with real-world experiences, mentors and educational pathways in Australia, helping them discover what they enjoy, what they are good at, and where they might belong. |
 | 설명 2 | 진로를 “고르기” 전에 먼저 “경험”해 보세요. 호주의 학교·대학·현장·멘토를 직접 만나며 나에게 맞는 길을 찾습니다. | Before you choose a career, experience it. Meet real schools, universities, workplaces and mentors in Australia and find the path that fits you. |
-| 버튼 1 (→ 경험) | 경험 둘러보기 | Explore Experiences |
+| 버튼 1 (→ 프로그램) | 프로그램 보기 | Explore Programs |
 | 버튼 2 (→ 멘토) | 멘토 만나기 | Meet a Mentor |
-| 버튼 3 (→ 탐색 테스트) | 나의 진로 경로 찾기 | Discover Your Pathway |
+| 버튼 3 (→ 진로탐색 & 매칭) | 나의 진로 경로 찾기 | Discover Your Pathway |
 
 ## 3. 철학 (Experience → Reflection → Pathway)
 _스트립 2 · 제목 + 한 줄 설명 + 카드 5개_
@@ -72,38 +71,30 @@ _스트립 2 · 제목 + 한 줄 설명 + 카드 5개_
 | 카드 5 제목 | 진로 경로 | Pathway |
 | 카드 5 설명 | 마지막에 비로소 교육과정과 호주 진학 경로를 연결합니다. | Only then do we connect the right courses and Australian study pathways. |
 
-## 4. 경험 (4종 카드)
-_스트립 3 · 제목 + 한 줄 설명 + 이미지 카드 4개 (이미지는 구매한 사진으로 교체)_
+## 4. 진로탐색 & 매칭
+_스트립 3 · 제목 + 설명 + 3단계 카드 + (아래 임베드 코드 embed/career-matching.html 을 붙여 넣으면 유형 6개·직업군 목록·프로그램 연결 문구는 코드 안에 이미 들어 있습니다)_
 
 | 항목 | 한글 | English |
 |---|---|---|
-| 제목 | 경험 | Experiences |
-| 한 줄 설명 | 한 가지 직업을 “설명”이 아니라 “하루”로 만나 보세요. | Meet a profession as a day, not a description. |
-| 카드 1 라벨 | 학교 | A School |
-| 카드 1 제목 | 호주 학교에서 프로젝트를 | Projects at an Australian school |
-| 카드 1 설명 | 학교 프로그램과 기숙사 생활을 경험하며 호주 교실의 문화를 만납니다. | Join school programs and boarding life to see how an Australian classroom works. |
-| 카드 2 라벨 | 대학 | A University |
-| 카드 2 제목 | 캠퍼스에서 학과를 체험 | Try a degree on campus |
-| 카드 2 설명 | 캠퍼스 방문과 학과 워크숍으로 대학 공부를 미리 맛봅니다. | Visit a campus and join department workshops to get a taste of university study. |
-| 카드 3 라벨 | 산업 현장 | An Industry |
-| 카드 3 제목 | 실제 직업 현장 탐방 | Visit a real workplace |
-| 카드 3 설명 | 연구시설, 인프라, 공공기관 등 일이 일어나는 곳을 직접 봅니다. | See research facilities, infrastructure and public bodies where the work actually happens. |
-| 카드 4 라벨 | 멘토 | A Mentor |
-| 카드 4 제목 | 현직자와의 대화 | Talk with people in the job |
-| 카드 4 설명 | “의사가 되고 싶어요”라면 의대생, 의사, 의료 전문가를 직접 만납니다. | If you want to be a doctor, meet a medical student, a doctor and a healthcare professional. |
+| 제목 | 진로탐색 & 매칭 | Career Discovery & Matching |
+| 한 줄 설명 | 무료 진로 흥미 검사를 한 뒤 결과 코드를 입력하면, 어울리는 직업군과 프로그램을 연결해 드립니다. | Take a free career interest test, enter your result code, and we match you with suitable job groups and programs. |
+| 단계 1 제목 | 검사하기 | Take the test |
+| 단계 1 설명 | 무료 흥미 검사(O*NET Interest Profiler)로 나의 흥미 유형을 확인합니다. | Find your interest types with the free O*NET Interest Profiler. |
+| 단계 1 버튼 (→ https://www.mynextmove.org/explore/ip) | 검사 바로가기 (영어) | Go to the test |
+| 단계 2 제목 | 결과 입력 | Enter your result |
+| 단계 2 설명 | 점수가 높은 순서대로 유형 3개를 아래에서 고릅니다. 검사를 아직 안 했다면 설명을 읽고 끌리는 유형을 골라도 됩니다. | Pick your top three types in order, highest score first. If you have not taken the test, choose the types that appeal to you. |
+| 단계 3 제목 | 매칭 확인 | See your matches |
+| 단계 3 설명 | 어울리는 직업군과 연결되는 프로그램을 확인합니다. | See the job groups that fit you and the programs they connect to. |
+| 유형 R | 현실형 (Realistic) — 직접 만들고, 고치고, 다루는 일을 좋아합니다. | Realistic — You like hands-on work: building, fixing and operating things. |
+| 유형 I | 탐구형 (Investigative) — 궁금한 것을 분석하고 연구하는 일을 좋아합니다. | Investigative — You like analysing problems and researching how things work. |
+| 유형 A | 예술형 (Artistic) — 상상하고 표현하고 창작하는 일을 좋아합니다. | Artistic — You like imagining, expressing and creating. |
+| 유형 S | 사회형 (Social) — 사람을 돕고 가르치고 돌보는 일을 좋아합니다. | Social — You like helping, teaching and caring for people. |
+| 유형 E | 진취형 (Enterprising) — 이끌고 설득하고 새로운 일을 벌이는 것을 좋아합니다. | Enterprising — You like leading, persuading and starting new things. |
+| 유형 C | 관습형 (Conventional) — 자료를 정리하고 규칙에 맞게 정확하게 처리하는 일을 좋아합니다. | Conventional — You like organising information and working accurately to clear rules. |
+| 안내문 | 샘플입니다. 직업군 매칭은 홀랜드(RIASEC) 흥미 유형에 따른 일반적인 분류이며, 진로를 결정해 주는 결과가 아닙니다. 검사 결과를 자동으로 가져오는 정식 연동은 준비 중입니다. | This is a sample. Job group matching follows the general Holland (RIASEC) interest types and does not decide your career. Automatic import of test results is in preparation. |
 
-## 5. 5분 자기 탐색
-_스트립 4 · 제목 + 설명 → 아래 '임베드 코드(embed/self-discovery.html)'를 붙여 넣으면 이 섹션의 문구는 코드 안에 이미 들어 있습니다_
-
-| 항목 | 한글 | English |
-|---|---|---|
-| 제목 | 5분 자기 탐색 | 5-Minute Self-Discovery |
-| 설명 | 검사 → 진로 결정이 아니라, 간단한 탐색 → 경험 추천. 끌리는 것을 골라 보세요. (최대 3개) | Not a test that decides your career, but a short exploration that suggests experiences. Pick up to three that appeal to you. |
-| 관심사 8개 | 연구 · 사람 · 문제 해결 · 만들기 · 자연 · 창의성 · 기술 · 리더십 | Research · People · Problem-solving · Building · Nature · Creativity · Technology · Leadership |
-| 결과 문구 | 직접 경험해 보면 어떨까요? | Why not experience it? |
-
-## 6. 프로그램 (직무 관련 세미나 · 커리어 전환)
-_스트립 5 · 제목 + 프로그램 카드 2개 (프로그램 1 안에 카테고리 카드 2개)_
+## 5. 프로그램 (직무 관련 세미나 · 커리어 전환)
+_스트립 4 · 제목 + 프로그램 카드 2개 (프로그램 1 안에 카테고리 카드 2개)_
 
 | 항목 | 한글 | English |
 |---|---|---|
@@ -120,42 +111,8 @@ _스트립 5 · 제목 + 프로그램 카드 2개 (프로그램 1 안에 카테�
 | 프로그램 2 설명 | 직업과 연관된 학과의 커리어 과정을 통해 커리어 전환과 학업을 병행합니다. | Change careers while you study, through career courses in the departments linked to the job. |
 | 안내문 | 프로그램은 개발 중이며, 일정·장소·참가 조건은 각 기관 및 학교의 정책과 협의 결과에 따라 달라질 수 있습니다. | These programs are in development. Schedule, locations and eligibility depend on each organisation's and school's policy. |
 
-## 7. 포트폴리오
-_스트립 5 아래 · 제목 + 설명 + 항목 8개_
-
-| 항목 | 한글 | English |
-|---|---|---|
-| 제목 | 나의 호주 미래 포트폴리오 | My Australian Future Portfolio |
-| 설명 | 프로그램이 끝나면 수료증 한 장이 아니라, 학생 자신의 기록을 가지고 돌아갑니다. | Students leave with their own record, not just a certificate. |
-| 항목 1 | 내가 경험한 것 | What I experienced |
-| 항목 2 | 예상과 달랐던 것 | What surprised me |
-| 항목 3 | 재미있었던 것 | What I enjoyed |
-| 항목 4 | 내가 잘했던 것 | What I was good at |
-| 항목 5 | 더 알고 싶은 것 | What I want to know more about |
-| 항목 6 | 만난 전문가 | Who I met |
-| 항목 7 | 다음 경험 | What I want to try next |
-| 항목 8 | 가능한 진로 경로 | My possible pathway |
-
-## 8. 함께 알아보는 경험 분야
-_스트립 6 · 제목 + 안내 + 카드 5개 (확정된 파트너십이 아님을 꼭 유지)_
-
-| 항목 | 한글 | English |
-|---|---|---|
-| 제목 | 함께 알아보고 있는 경험 분야 | Experience areas we are exploring |
-| 안내 | 아래는 학생 체험 프로그램을 운영하거나 협력을 제안해 볼 만한 기관·분야의 후보입니다. 확정된 파트너십이 아니며, 외부·국제 학생의 참여 가능 여부는 기관별로 확인 중입니다. | These are candidate organisations and fields. They are not confirmed partnerships, and eligibility for external or international students is still being checked with each organisation. |
-| 카드 1 제목 | 인프라 & 기술 | Infrastructure & Technology |
-| 카드 1 내용 | Sydney Metro · WaterNSW / Warragamba Dam · Engineers Australia | Sydney Metro · WaterNSW / Warragamba Dam · Engineers Australia |
-| 카드 2 제목 | 과학 & 건강 | Science & Health |
-| 카드 2 내용 | ANSTO · CSIRO · Australian Museum | ANSTO · CSIRO · Australian Museum |
-| 카드 3 제목 | 환경 & 에너지 | Environment & Energy |
-| 카드 3 내용 | Sydney Water · Field of Mars EEC · Taronga Zoo | Sydney Water · Field of Mars EEC · Taronga Zoo |
-| 카드 4 제목 | 미래 진로 & 산업 | Future Careers & Industry |
-| 카드 4 내용 | Powerhouse Parramatta · NSW Parliament · Observatory Hill EEC · 대학 아웃리치 | Powerhouse Parramatta · NSW Parliament · Observatory Hill EEC · University outreach |
-| 카드 5 제목 | 학교 & 기숙사 | School & Boarding |
-| 카드 5 내용 | 시드니 사립학교 boarding 프로그램과의 협력 논의 | Discussing partnerships with boarding programs at Sydney independent schools |
-
-## 9. 멘토 소개
-_스트립 7 · 사진 + 이름 + 직함 3줄_
+## 6. 멘토 소개
+_스트립 5 · 사진 + 이름 + 직함 3줄_
 
 | 항목 | 한글 | English |
 |---|---|---|
@@ -166,8 +123,8 @@ _스트립 7 · 사진 + 이름 + 직함 3줄_
 | 경력 2 | Korean Language School teacher | Korean Language School — Teacher |
 | 경력 3 | 호주한인상공회의소 사무국위원장 | Korean Chamber of Commerce in Australia — Chair of the Secretariat  ※ 공식 영문 명칭·직함을 확인해 맞춰 주세요 |
 
-## 10. 문의
-_스트립 8 · 제목 + 안내 + Wix 문의 폼 (받는 메일: info@thescholaredu.com)_
+## 7. 문의
+_스트립 6 · 제목 + 안내 + Wix 문의 폼 (받는 메일: info@thescholaredu.com)_
 
 | 항목 | 한글 | English |
 |---|---|---|
@@ -180,7 +137,7 @@ _스트립 8 · 제목 + 안내 + Wix 문의 폼 (받는 메일: info@thescholar
 | 보내기 버튼 | 보내기 | Send |
 | 전송 완료 문구 | 문의가 접수되었습니다. 곧 연락드리겠습니다. | Thank you. We have received your message and will get back to you soon. |
 
-## 11. 푸터
+## 8. 푸터
 _맨 아래 · 세로형 로고 + 저작권_
 
 | 항목 | 한글 | English |

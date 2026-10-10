@@ -23,7 +23,6 @@
   --btn-fg: #f7f4ec;
   --radius: 16px;
 }
-
 :root[data-theme="dark"] {
   --bg: #0e1a2d;
   --surface: #16253d;
@@ -35,7 +34,6 @@
   --btn-bg: #c9a45f;
   --btn-fg: #14233a;
 }
-
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     --bg: #0e1a2d;
@@ -49,11 +47,8 @@
   --btn-fg: #14233a;
   }
 }
-
 * { box-sizing: border-box; }
-
 html { scroll-behavior: smooth; }
-
 body {
   margin: 0;
   background: var(--bg);
@@ -64,9 +59,7 @@ body {
   word-break: keep-all;
   overflow-wrap: break-word;
 }
-
 a { color: inherit; text-decoration: none; }
-
 .site-header {
   position: sticky;
   top: env(safe-area-inset-top, 0px);
@@ -80,7 +73,6 @@ a { color: inherit; text-decoration: none; }
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border);
 }
-
 .logo { display: block; flex: none; line-height: 0; }
 .logo img { height: 54px; width: auto; }
 img.logo-dark { display: none; }
@@ -92,11 +84,9 @@ img.logo-dark { display: none; }
 }
 .footer-logo { width: 220px; max-width: 70%; height: auto; }
 .site-footer p { margin: 12px 0 0; }
-
 .site-header nav { display: flex; align-items: center; gap: 18px; }
 .site-header nav a { color: var(--muted); font-size: 0.92rem; white-space: nowrap; }
 .site-header nav a:hover { color: var(--text); }
-
 #theme-toggle {
   border: 1px solid var(--border);
   background: var(--surface);
@@ -108,9 +98,7 @@ img.logo-dark { display: none; }
   font-size: 1rem;
   flex: none;
 }
-
 main { max-width: 900px; margin: 0 auto; padding: 0 24px; }
-
 .hero { padding: 96px 0 72px; }
 .eyebrow { color: var(--accent); font-weight: 700; font-size: 0.9rem; letter-spacing: 0.04em; margin: 0 0 14px; }
 .hero h1 {
@@ -122,9 +110,7 @@ main { max-width: 900px; margin: 0 auto; padding: 0 24px; }
 .accent { color: var(--accent); }
 .lead { font-size: 1.1rem; color: var(--muted); max-width: 36em; margin: 0 0 10px; }
 .lead-ko { color: var(--muted); max-width: 36em; margin: 0 0 32px; font-size: 0.98rem; }
-
 .actions { display: flex; flex-wrap: wrap; gap: 12px; }
-
 .btn {
   display: inline-block;
   padding: 11px 22px;
@@ -139,59 +125,17 @@ main { max-width: 900px; margin: 0 auto; padding: 0 24px; }
 }
 .btn:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12); }
 .btn.primary { background: var(--btn-bg); border-color: var(--btn-bg); color: var(--btn-fg); }
-
 .section { padding: 64px 0; border-top: 1px solid var(--border); scroll-margin-top: 60px; }
 .section h2 { font-size: 1.7rem; margin: 0 0 12px; letter-spacing: -0.02em; }
 .section-lead { color: var(--muted); margin: 0 0 28px; max-width: 40em; }
 .sub { margin: 40px 0 8px; font-size: 1.2rem; }
 .muted { color: var(--muted); }
 .note { color: var(--muted); font-size: 0.85rem; margin: 16px 0 0; }
-
 .steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; grid-template-columns: repeat(5, 1fr); }
 .steps li { padding: 20px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); }
 .steps .num { color: var(--accent); font-weight: 800; font-size: 0.85rem; }
 .steps h3 { margin: 4px 0 6px; font-size: 1.1rem; }
 .steps p { margin: 0; color: var(--muted); font-size: 0.9rem; }
-
-.tiles { display: grid; gap: 16px; grid-template-columns: repeat(4, 1fr); }
-.tile {
-  min-height: 220px;
-  padding: 22px;
-  border-radius: var(--radius);
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  transition: transform 0.2s;
-}
-.tile:hover { transform: translateY(-4px); }
-.tile .kicker { font-size: 0.75rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.85; }
-.tile h3 { margin: 4px 0 6px; font-size: 1.15rem; line-height: 1.35; }
-.tile p { margin: 0; font-size: 0.88rem; opacity: 0.92; }
-.t1 { background: linear-gradient(160deg, #3b5bdb, #16213a); }
-.t2 { background: linear-gradient(160deg, #0c8599, #16213a); }
-.t3 { background: linear-gradient(160deg, #b08d4c, #4a3a1c); }
-.t4 { background: linear-gradient(160deg, #7048e8, #16213a); }
-
-.chips { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; }
-.chip {
-  padding: 8px 16px;
-  border-radius: 999px;
-  border: 1px solid var(--border);
-  background: var(--surface);
-  color: var(--text);
-  font: inherit;
-  cursor: pointer;
-}
-.chip[aria-pressed="true"] { background: var(--btn-bg); border-color: var(--btn-bg); color: var(--btn-fg); }
-.chip:disabled { opacity: 0.45; cursor: not-allowed; }
-
-.result { padding: 22px; background: var(--surface); border: 1px dashed var(--border); border-radius: var(--radius); }
-.result p { margin: 0 0 10px; }
-.result h4 { margin: 0 0 10px; font-size: 1.05rem; }
-.result ul { margin: 0; padding-left: 20px; }
-.result li { margin-bottom: 4px; }
-
 .program { display: grid; gap: 12px; padding: 24px; margin-bottom: 16px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); }
 .program h3 { margin: 0; font-size: 1.25rem; line-height: 1.4; }
 .program h3 .en { display: block; margin-top: 2px; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.04em; color: var(--accent); }
@@ -203,28 +147,25 @@ main { max-width: 900px; margin: 0 auto; padding: 0 24px; }
 .cat { min-width: 0; padding: 18px; border: 1px solid var(--border); border-radius: 12px; background: var(--bg); }
 .cat h4 { margin: 0 0 6px; font-size: 1.02rem; line-height: 1.4; overflow-wrap: anywhere; }
 .cat p { margin: 0; color: var(--muted); font-size: 0.94rem; }
-
-.portfolio { list-style: none; margin: 16px 0 0; padding: 0; display: grid; gap: 10px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
-.portfolio li { padding: 14px 18px; background: var(--accent-soft); border-radius: 12px; font-weight: 600; }
-.portfolio small { display: block; color: var(--muted); font-weight: 400; }
-
-.cards { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
-.card { padding: 22px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); }
-.card h3 { margin: 0 0 8px; font-size: 1.05rem; }
-.card p { margin: 0; color: var(--muted); font-size: 0.92rem; }
-
 .profile { display: flex; gap: 24px; align-items: center; padding: 26px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); }
 .avatar { flex: none; width: 88px; height: 88px; border-radius: 50%; background: var(--navy); color: #fff; display: grid; place-items: center; font-size: 1.6rem; font-weight: 800; }
 .profile h3 { margin: 0; font-size: 1.4rem; }
 .role { margin: 2px 0 10px; color: var(--accent); font-weight: 700; }
 .roles { margin: 0; padding-left: 18px; color: var(--muted); }
-
 .contact-card { display: grid; gap: 10px; justify-items: start; max-width: 520px; padding: 24px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); }
 .contact-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); }
 .contact-email { font-size: clamp(1.15rem, 4.6vw, 1.5rem); overflow-wrap: anywhere; user-select: all; }
 .contact-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 6px; }
 .contact-card .note { margin: 0; min-height: 1.4em; }
-.btn:focus-visible, .chip:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.en-sub { display: block; margin-top: 2px; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.04em; color: var(--accent); }
+.flow { list-style: none; margin: 0 0 20px; padding: 0; counter-reset: f; display: grid; gap: 12px; grid-template-columns: repeat(3, 1fr); }
+.flow li { counter-increment: f; display: grid; gap: 6px; align-content: start; min-width: 0; padding: 18px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); }
+.flow li::before { content: counter(f); display: grid; place-items: center; width: 1.7rem; height: 1.7rem; border-radius: 50%; background: var(--accent-soft); color: var(--accent); font-weight: 800; font-size: 0.85rem; }
+.flow b { font-size: 1.02rem; }
+.flow span { color: var(--muted); font-size: 0.92rem; }
+.flow .btn { justify-self: start; margin-top: 6px; padding: 8px 16px; font-size: 0.9rem; }
+@media (max-width: 760px) { .flow { grid-template-columns: 1fr; } }
 
 .site-footer {
   width: min(852px, calc(100% - 48px));
@@ -234,24 +175,18 @@ main { max-width: 900px; margin: 0 auto; padding: 0 24px; }
   font-size: 0.9rem;
   border-top: 1px solid var(--border);
 }
-
 @media (max-width: 700px) {
   .cats { grid-template-columns: 1fr; }
 }
-
 @media (max-width: 860px) {
   .steps { grid-template-columns: repeat(2, 1fr); }
-  .tiles { grid-template-columns: repeat(2, 1fr); }
 }
-
 @media (max-width: 760px) {
   .site-header nav a { display: none; }
 }
-
 @media (max-width: 520px) {
-  .steps, .tiles { grid-template-columns: 1fr; }
+  .steps { grid-template-columns: 1fr; }
 }
-
 @media (max-width: 640px) {
   .hero { padding: 64px 0 48px; }
   .site-header { padding: 12px 16px; }
@@ -259,6 +194,47 @@ main { max-width: 900px; margin: 0 auto; padding: 0 24px; }
   .site-footer { width: calc(100% - 32px); }
   .profile { flex-direction: column; align-items: flex-start; }
 }
+
+</style>
+  <style>
+/* Styles for matching.js. Uses the page's colour tokens: --bg --surface --text --muted --border --accent --accent-soft --btn-bg --btn-fg */
+.matcher { display: grid; gap: 14px; }
+.matcher-lead { margin: 0; color: var(--muted); }
+.types { display: grid; gap: 10px; grid-template-columns: repeat(3, 1fr); }
+.type { display: grid; grid-template-columns: auto 1fr; grid-template-rows: auto auto; gap: 4px 12px; align-items: start; min-width: 0; padding: 14px; text-align: left; font: inherit; color: var(--text); background: var(--surface); border: 1px solid var(--border); border-radius: 12px; cursor: pointer; }
+.type:focus-visible, .link-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.type-letter { grid-row: span 2; display: grid; place-items: center; width: 2.2rem; height: 2.2rem; border-radius: 50%; background: var(--accent-soft); font-weight: 800; color: var(--accent); }
+.type-body { display: grid; gap: 2px; min-width: 0; }
+.type-body strong small { margin-left: 4px; font-weight: 400; color: var(--muted); }
+.type-desc { color: var(--muted); font-size: 0.88rem; line-height: 1.5; }
+.type-rank { grid-column: 2; min-height: 1.2em; font-size: 0.78rem; font-weight: 800; letter-spacing: 0.04em; color: var(--accent); }
+.type[aria-pressed="true"] { background: var(--btn-bg); border-color: var(--btn-bg); color: var(--btn-fg); }
+.type[aria-pressed="true"] .type-letter { background: var(--btn-fg); color: var(--btn-bg); }
+.type[aria-pressed="true"] .type-desc, .type[aria-pressed="true"] .type-body strong small, .type[aria-pressed="true"] .type-rank { color: var(--btn-fg); opacity: 0.85; }
+.type:disabled { opacity: 0.45; cursor: not-allowed; }
+
+.code-row { display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px; }
+.code-row:empty { display: none; }
+.code-label { color: var(--muted); font-size: 0.88rem; }
+.code { font-size: 1.3rem; letter-spacing: 0.08em; }
+.link-btn { margin-left: auto; padding: 2px 4px; border: 0; background: none; color: var(--accent); font: inherit; font-size: 0.9rem; text-decoration: underline; cursor: pointer; }
+
+.match-result { display: grid; gap: 10px; padding: 20px; background: var(--surface); border: 1px dashed var(--border); border-radius: 16px; }
+.match-result h4 { margin: 6px 0 0; font-size: 1rem; }
+.match-result h4:first-child { margin-top: 0; }
+.match-result p { margin: 0; }
+.jobs, .progs { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.jobs li { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 8px 12px; background: var(--bg); border: 1px solid var(--border); border-radius: 10px; min-width: 0; overflow-wrap: anywhere; }
+.job-type { flex: none; font-size: 0.75rem; font-weight: 800; color: var(--accent); }
+.progs li { padding: 10px 12px; background: var(--accent-soft); border-radius: 10px; overflow-wrap: anywhere; }
+.progs li.best { outline: 1px solid var(--accent); }
+.next { display: grid; gap: 6px; padding-top: 6px; }
+.next-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 4px; }
+.match-result .muted { color: var(--muted); }
+.match-result .note { color: var(--muted); font-size: 0.85rem; }
+
+@media (max-width: 760px) { .types { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 460px) { .types { grid-template-columns: 1fr; } }
 
 </style>
 </head>
@@ -270,8 +246,7 @@ main { max-width: 900px; margin: 0 auto; padding: 0 24px; }
     </a>
     <nav aria-label="주요 메뉴">
       <a href="#approach">철학</a>
-      <a href="#experiences">경험</a>
-      <a href="#discover">테스트</a>
+      <a href="#discover">진로탐색·매칭</a>
       <a href="#program">프로그램</a>
       <a href="#mentor">멘토</a>
       <a href="#contact">문의</a>
@@ -286,7 +261,7 @@ main { max-width: 900px; margin: 0 auto; padding: 0 24px; }
       <p class="lead">We connect young people with real-world experiences, mentors and educational pathways in Australia — helping them discover what they enjoy, what they are good at, and where they might belong.</p>
       <p class="lead-ko">진로를 “고르기” 전에 먼저 “경험”해 보세요. 호주의 학교·대학·현장·멘토를 직접 만나며 나에게 맞는 길을 찾는 프로그램입니다.</p>
       <div class="actions">
-        <a class="btn primary" href="#experiences">Explore Experiences</a>
+        <a class="btn primary" href="#program">Explore Programs</a>
         <a class="btn" href="#mentor">Meet a Mentor</a>
         <a class="btn" href="#discover">Discover Your Pathway</a>
       </div>
@@ -304,41 +279,17 @@ main { max-width: 900px; margin: 0 auto; padding: 0 24px; }
       </ol>
     </section>
 
-    <section id="experiences" class="section">
-      <h2>Experiences</h2>
-      <p class="section-lead">한 가지 직업을 “설명”이 아니라 “하루”로 만나 보세요.</p>
-      <div class="tiles">
-        <article class="tile t1">
-          <span class="kicker">A School</span>
-          <h3>호주 학교에서 프로젝트를</h3>
-          <p>학교 프로그램과 기숙사 생활을 경험하며 호주 교실의 문화를 만납니다.</p>
-        </article>
-        <article class="tile t2">
-          <span class="kicker">A University</span>
-          <h3>캠퍼스에서 학과를 체험</h3>
-          <p>캠퍼스 방문과 학과 워크숍으로 대학 공부를 미리 맛봅니다.</p>
-        </article>
-        <article class="tile t3">
-          <span class="kicker">An Industry</span>
-          <h3>실제 직업 현장 탐방</h3>
-          <p>연구시설, 인프라, 공공기관 등 일이 일어나는 곳을 직접 봅니다.</p>
-        </article>
-        <article class="tile t4">
-          <span class="kicker">A Mentor</span>
-          <h3>현직자와의 대화</h3>
-          <p>“의사가 되고 싶어요”라면 의대생, 의사, 의료 전문가를 직접 만납니다.</p>
-        </article>
-      </div>
-      <p class="note">사진은 준비 중입니다. 실제 프로그램 사진으로 교체될 예정입니다.</p>
-    </section>
-
     <section id="discover" class="section">
-      <h2>5분 Self-Discovery</h2>
-      <p class="section-lead">검사 → 진로 결정이 아니라, 간단한 탐색 → 경험 추천. 끌리는 것을 골라 보세요. (최대 3개)</p>
-      <div id="chips" class="chips" role="group" aria-label="관심사 선택"></div>
-      <div id="result" class="result" aria-live="polite">
-        <p class="muted">관심사를 선택하면 추천 경험이 여기에 나타납니다.</p>
-      </div>
+      <h2>진로탐색 &amp; 매칭 <span class="en-sub">Career Discovery &amp; Matching</span></h2>
+      <p class="section-lead">무료 진로 흥미 검사를 한 뒤 결과 코드를 입력하면, 어울리는 직업군과 프로그램을 연결해 드립니다.</p>
+      <ol class="flow">
+        <li><b>검사하기</b><span>무료 흥미 검사(O*NET Interest Profiler)로 나의 흥미 유형을 확인합니다.</span>
+          <a class="btn" href="https://www.mynextmove.org/explore/ip" target="_blank" rel="noopener">검사 바로가기 (영어)</a></li>
+        <li><b>결과 입력</b><span>점수가 높은 순서대로 유형 3개를 아래에서 고릅니다. 검사를 아직 안 했다면 설명을 읽고 끌리는 유형을 골라도 됩니다.</span></li>
+        <li><b>매칭 확인</b><span>어울리는 직업군과 연결되는 프로그램을 확인합니다.</span></li>
+      </ol>
+      <div id="matcher" class="matcher"></div>
+      <p class="note">샘플입니다. 직업군 매칭은 홀랜드(RIASEC) 흥미 유형에 따른 일반적인 분류이며, 진로를 결정해 주는 결과가 아닙니다. 검사 결과를 자동으로 가져오는 정식 연동은 준비 중입니다.</p>
     </section>
 
     <section id="program" class="section">
@@ -372,30 +323,6 @@ main { max-width: 900px; margin: 0 auto; padding: 0 24px; }
 
       <p class="note">프로그램은 개발 중이며, 일정·장소·참가 조건은 각 기관 및 학교의 정책과 협의 결과에 따라 달라질 수 있습니다.</p>
 
-      <h3 class="sub">My Australian Future Portfolio</h3>
-      <p>프로그램이 끝나면 수료증 한 장이 아니라, 학생 자신의 기록을 가지고 돌아갑니다.</p>
-      <ul class="portfolio">
-        <li>What I experienced <small>내가 경험한 것</small></li>
-        <li>What surprised me <small>예상과 달랐던 것</small></li>
-        <li>What I enjoyed <small>재미있었던 것</small></li>
-        <li>What I was good at <small>내가 잘했던 것</small></li>
-        <li>What I want to know more about <small>더 알고 싶은 것</small></li>
-        <li>Who I met <small>만난 전문가</small></li>
-        <li>What I want to try next <small>다음 경험</small></li>
-        <li>My possible pathway <small>가능한 진로 경로</small></li>
-      </ul>
-    </section>
-
-    <section id="explore-list" class="section">
-      <h2>함께 알아보고 있는 경험 분야</h2>
-      <p class="section-lead">아래는 학생 체험 프로그램을 운영하거나 협력을 제안해 볼 만한 기관·분야의 <b>후보</b>입니다. 확정된 파트너십이 아니며, 외부·국제 학생의 참여 가능 여부는 기관별로 확인 중입니다.</p>
-      <div class="cards">
-        <article class="card"><h3>Infrastructure &amp; Technology</h3><p>Sydney Metro · WaterNSW / Warragamba Dam · Engineers Australia</p></article>
-        <article class="card"><h3>Science &amp; Health</h3><p>ANSTO · CSIRO · Australian Museum</p></article>
-        <article class="card"><h3>Environment &amp; Energy</h3><p>Sydney Water · Field of Mars EEC · Taronga Zoo</p></article>
-        <article class="card"><h3>Future Careers &amp; Industry</h3><p>Powerhouse Parramatta · NSW Parliament · Observatory Hill EEC · 대학 아웃리치</p></article>
-        <article class="card"><h3>School &amp; Boarding</h3><p>시드니 사립학교 boarding 프로그램과의 협력 논의</p></article>
-      </div>
     </section>
 
     <section id="mentor" class="section">
@@ -436,6 +363,197 @@ main { max-width: 900px; margin: 0 auto; padding: 0 24px; }
   </footer>
 
   <script>
+/* Career Discovery & Matching widget (sample).
+ *
+ * The user picks up to three Holland (RIASEC) interest types in order, e.g. from the result of a free
+ * interest test such as the O*NET Interest Profiler. The widget then lists matching job groups and
+ * the programs they connect to. The mapping is a general classification, not a verdict.
+ *
+ * Usage:  initMatcher(document.getElementById("matcher"), { lang: "ko" });   // or "en"
+ *          options: contactHref, programHref (empty string hides the button), target ("_top" inside an iframe)
+ * Edit the TYPES, JOBS and PROGRAMS tables below to change the content.
+ */
+(function () {
+  var MAX_PICKS = 3;
+  var RANK_WEIGHT = [3, 2, 1];
+
+  var TYPES = {
+    R: { ko: ["현실형", "Realistic"],     d: { ko: "직접 만들고, 고치고, 다루는 일을 좋아합니다.",           en: "You like hands-on work: building, fixing and operating things." } },
+    I: { ko: ["탐구형", "Investigative"], d: { ko: "궁금한 것을 분석하고 연구하는 일을 좋아합니다.",         en: "You like analysing problems and researching how things work." } },
+    A: { ko: ["예술형", "Artistic"],      d: { ko: "상상하고 표현하고 창작하는 일을 좋아합니다.",             en: "You like imagining, expressing and creating." } },
+    S: { ko: ["사회형", "Social"],        d: { ko: "사람을 돕고 가르치고 돌보는 일을 좋아합니다.",           en: "You like helping, teaching and caring for people." } },
+    E: { ko: ["진취형", "Enterprising"],  d: { ko: "이끌고 설득하고 새로운 일을 벌이는 것을 좋아합니다.",     en: "You like leading, persuading and starting new things." } },
+    C: { ko: ["관습형", "Conventional"],  d: { ko: "자료를 정리하고 규칙에 맞게 정확하게 처리하는 일을 좋아합니다.", en: "You like organising information and working accurately to clear rules." } },
+  };
+
+  // [Korean, English] job groups per interest type, in priority order.
+  var JOBS = {
+    R: [["공학·기술 엔지니어", "Engineering & technical"], ["의료·실험 장비 기술", "Medical & lab equipment technology"], ["건설·시설 관리", "Construction & facilities"], ["환경·자연 현장", "Environment & field work"]],
+    I: [["연구원·과학자", "Research & science"], ["바이오·생명공학 연구", "Biotechnology & bioengineering research"], ["의사·의학 전문직", "Medicine & medical professions"], ["데이터·AI 분석", "Data & AI analysis"]],
+    A: [["디자인·미디어", "Design & media"], ["콘텐츠·글쓰기", "Content & writing"], ["건축·공간 디자인", "Architecture & spatial design"], ["의료·과학 시각화·커뮤니케이션", "Medical & science visualisation and communication"]],
+    S: [["간호·보건 돌봄", "Nursing & health care"], ["교육·상담", "Education & counselling"], ["재활·치료", "Rehabilitation & therapy"], ["사회복지", "Social work"]],
+    E: [["경영·창업", "Business & entrepreneurship"], ["마케팅·영업", "Marketing & sales"], ["법률·정책", "Law & policy"], ["헬스케어·바이오 비즈니스", "Healthcare & biotech business"]],
+    C: [["회계·재무", "Accounting & finance"], ["행정·사무 관리", "Administration"], ["의료정보·기록 관리", "Health information management"], ["품질·규정 관리", "Quality & regulatory affairs"]],
+  };
+
+  // How strongly each interest type points to a program category (0 = not at all).
+  var PROGRAMS = [
+    { name: ["Biotechnology & Bioengineering", "Biotechnology & Bioengineering"], w: { I: 3, R: 2, C: 1, E: 0.5 } },
+    { name: ["Medicine, Nursing & Health Sciences", "Medicine, Nursing & Health Sciences"], w: { S: 3, I: 2, C: 1, E: 0.5, R: 0.5 } },
+  ];
+
+  var T = {
+    ko: {
+      pickLead: "점수가 높은 순서대로 유형을 눌러 주세요 (최대 3개). 다시 누르면 취소됩니다.",
+      yourCode: "나의 유형 코드", reset: "처음부터",
+      empty: "유형을 선택하면 어울리는 직업군과 프로그램이 여기에 나타납니다.",
+      jobs: "어울리는 직업군", programs: "연결되는 프로그램", seminar: "직무 관련 세미나 프로그램",
+      next: "다음 단계", nextText: "연관 학과의 커리어 과정과 학업을 함께 알아보고 싶다면 커리어 전환 및 학업 병행 프로그램을 문의하세요.",
+      contact: "상담 문의", programsLink: "프로그램 보기", more: "3개를 고르면 더 정확하게 매칭됩니다.", group: "흥미 유형 선택",
+      rank: function (n) { return n + "순위"; },
+    },
+    en: {
+      pickLead: "Click your types in order, highest score first (up to three). Click again to remove.",
+      yourCode: "Your type code", reset: "Start over",
+      empty: "Pick your interest types and matching job groups and programs will appear here.",
+      jobs: "Job groups that fit you", programs: "Connected programs", seminar: "Job-Related Seminar Program",
+      next: "Next step", nextText: "To study the career course of a related department while you study, ask about the Career Change & Study Program.",
+      contact: "Contact us", programsLink: "See programs", more: "Pick three types for a closer match.", group: "Choose interest types",
+      rank: function (n) { return "#" + n; },
+    },
+  };
+
+  function el(tag, cls, text) {
+    var e = document.createElement(tag);
+    if (cls) e.className = cls;
+    if (text != null) e.textContent = text;
+    return e;
+  }
+
+  window.initMatcher = function (root, opts) {
+    if (!root) return;
+    var lang = (opts && opts.lang) === "en" ? "en" : "ko";
+    var L = lang === "ko" ? 0 : 1;
+    var t = T[lang];
+    var o = opts || {};
+    var contactHref = "contactHref" in o ? o.contactHref : "#contact";   // empty string hides the button
+    var programHref = "programHref" in o ? o.programHref : "#program";
+    var linkTarget = o.target || "";                                       // "_top" when embedded in an iframe
+    var picked = [];
+
+    root.textContent = "";
+    root.classList.add("matcher");
+    var lead = el("p", "matcher-lead", t.pickLead);
+    var grid = el("div", "types");
+    grid.setAttribute("role", "group");
+    grid.setAttribute("aria-label", t.group);
+    var codeRow = el("div", "code-row");
+    var out = el("div", "match-result");
+    out.setAttribute("aria-live", "polite");
+    root.append(lead, grid, codeRow, out);
+
+    var buttons = {};
+    Object.keys(TYPES).forEach(function (k) {
+      var ty = TYPES[k];
+      var b = el("button", "type");
+      b.type = "button";
+      b.dataset.key = k;
+      var letter = el("span", "type-letter", k);
+      var body = el("span", "type-body");
+      var name = el("strong", null, lang === "ko" ? ty.ko[0] + " " : ty.ko[1]);
+      if (lang === "ko") name.appendChild(el("small", null, ty.ko[1]));
+      body.append(name, el("span", "type-desc", ty.d[lang]));
+      var rank = el("span", "type-rank");
+      b.append(letter, body, rank);
+      b.addEventListener("click", function () {
+        var i = picked.indexOf(k);
+        if (i >= 0) picked.splice(i, 1);
+        else if (picked.length < MAX_PICKS) picked.push(k);
+        render();
+      });
+      buttons[k] = b;
+      grid.appendChild(b);
+    });
+
+    function scoreOf(prog) {
+      return picked.reduce(function (s, k, i) { return s + RANK_WEIGHT[i] * (prog.w[k] || 0); }, 0);
+    }
+
+    function render() {
+      Object.keys(buttons).forEach(function (k) {
+        var b = buttons[k], i = picked.indexOf(k);
+        b.setAttribute("aria-pressed", i >= 0);
+        b.disabled = i < 0 && picked.length >= MAX_PICKS;
+        b.querySelector(".type-rank").textContent = i >= 0 ? t.rank(i + 1) : "";
+      });
+
+      codeRow.textContent = "";
+      out.textContent = "";
+      if (!picked.length) {
+        out.appendChild(el("p", "muted", t.empty));
+        return;
+      }
+
+      codeRow.appendChild(el("span", "code-label", t.yourCode));
+      codeRow.appendChild(el("strong", "code", picked.join(" · ")));
+      var reset = el("button", "link-btn", t.reset);
+      reset.type = "button";
+      reset.addEventListener("click", function () { picked = []; render(); });
+      codeRow.appendChild(reset);
+
+      // Job groups: 3 from the first type, 2 from the second, 1 from the third.
+      var quota = [3, 2, 1], seen = {}, jobs = [];
+      picked.forEach(function (k, i) {
+        JOBS[k].slice(0, quota[i]).forEach(function (j) {
+          if (!seen[j[0]]) { seen[j[0]] = 1; jobs.push({ text: j[L], type: k }); }
+        });
+      });
+      out.appendChild(el("h4", null, t.jobs));
+      var ul = el("ul", "jobs");
+      jobs.forEach(function (j) {
+        var li = el("li", null, j.text);
+        li.appendChild(el("span", "job-type", j.type));
+        ul.appendChild(li);
+      });
+      out.appendChild(ul);
+
+      // Programs: best-scoring category, plus the other if it is close.
+      var scored = PROGRAMS.map(function (p) { return { p: p, s: scoreOf(p) }; }).sort(function (a, b) { return b.s - a.s; });
+      var top = scored[0].s;
+      out.appendChild(el("h4", null, t.programs));
+      var pl = el("ul", "progs");
+      scored.filter(function (x) { return top > 0 && x.s >= top * 0.75; }).forEach(function (x, idx) {
+        var li = el("li");
+        li.appendChild(el("strong", null, x.p.name[L]));
+        li.appendChild(el("span", "muted", " · " + t.seminar));
+        if (idx === 0) li.classList.add("best");
+        pl.appendChild(li);
+      });
+      out.appendChild(pl);
+
+      var next = el("div", "next");
+      next.appendChild(el("strong", null, t.next));
+      next.appendChild(el("p", null, t.nextText));
+      var acts = el("div", "next-actions");
+      [[contactHref, t.contact, "btn primary"], [programHref, t.programsLink, "btn"]].forEach(function (x) {
+        if (!x[0]) return;
+        var a = el("a", x[2], x[1]);
+        a.href = x[0];
+        if (linkTarget) a.target = linkTarget;
+        acts.appendChild(a);
+      });
+      next.appendChild(acts);
+      out.appendChild(next);
+
+      if (picked.length < MAX_PICKS) out.appendChild(el("p", "note", t.more));
+    }
+
+    render();
+  };
+})();
+
+</script>
+  <script>
 const root = document.documentElement;
 
 try {
@@ -456,53 +574,8 @@ document.getElementById("theme-toggle").addEventListener("click", () => {
 
 document.getElementById("year").textContent = new Date().getFullYear();
 
-// Self-Discovery: pick interests -> suggest experiences (not a career verdict).
-const INTERESTS = {
-  "Research": ["University Science Lab Visit", "Research facility tour (e.g. ANSTO-style STEM day)"],
-  "People": ["Healthcare Mentor Session", "School & Boarding Experience"],
-  "Problem-solving": ["Design the Metro Station of the Future (mini challenge)", "Engineering Experience Day"],
-  "Building": ["Infrastructure Experience (metro, dam, water)", "Urban Planning Design Challenge"],
-  "Nature": ["Environment & Water Experience", "Conservation / Field Study Day"],
-  "Creativity": ["Future City design project", "Media & Design Mentor Session"],
-  "Technology": ["AI & Technology Mentor Session", "STEM Innovation Experience"],
-  "Leadership": ["Parliament & Policy Experience", "School Leadership & Sport Day"],
-};
-const MAX_PICKS = 3;
-const chips = document.getElementById("chips");
-const result = document.getElementById("result");
-const picked = new Set();
-
-function render() {
-  chips.querySelectorAll(".chip").forEach((b) => {
-    const on = picked.has(b.dataset.key);
-    b.setAttribute("aria-pressed", on);
-    b.disabled = !on && picked.size >= MAX_PICKS;
-  });
-  if (!picked.size) {
-    result.innerHTML = '<p class="muted">관심사를 선택하면 추천 경험이 여기에 나타납니다.</p>';
-    return;
-  }
-  const items = [...new Set([...picked].flatMap((k) => INTERESTS[k]))];
-  result.innerHTML =
-    `<h4>Your profile suggests you may enjoy: ${[...picked].join(", ")}</h4>` +
-    "<p>Why not experience it?</p><ul>" +
-    items.map((t) => `<li>${t}</li>`).join("") +
-    "</ul>";
-}
-
-Object.keys(INTERESTS).forEach((key) => {
-  const b = document.createElement("button");
-  b.type = "button";
-  b.className = "chip";
-  b.dataset.key = key;
-  b.textContent = key;
-  b.addEventListener("click", () => {
-    picked.has(key) ? picked.delete(key) : picked.add(key);
-    render();
-  });
-  chips.appendChild(b);
-});
-render();
+// Career Discovery & Matching widget (see matching.js)
+if (window.initMatcher) initMatcher(document.getElementById("matcher"), { lang: "ko" });
 
 // Contact: show the address and let people copy it (works everywhere, no mail app needed).
 const emailText = document.getElementById("contact-email");

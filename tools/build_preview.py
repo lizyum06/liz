@@ -24,9 +24,9 @@ def bundle():
     html = read("index.html")
     html = re.sub(r'src="(logo/[^"]+\.svg)"', lambda m: f'src="{data_uri(m.group(1))}"', html)
     html = re.sub(r'href="(logo/[^"]+\.svg)"', lambda m: f'href="{data_uri(m.group(1))}"', html)
-    html = html.replace('<link rel="stylesheet" href="style.css">', "<style>\n" + read("style.css") + "\n</style>")
-    html = html.replace('<script src="script.js"></script>', "<script>\n" + read("script.js") + "\n</script>")
-    assert "style.css" not in html and "script.js" not in html and 'src="logo/' not in html
+    html = re.sub(r'<link rel="stylesheet" href="([\w./-]+\.css)">', lambda m: "<style>\n" + read(m.group(1)) + "\n</style>", html)
+    html = re.sub(r'<script src="([\w./-]+\.js)"></script>', lambda m: "<script>\n" + read(m.group(1)) + "\n</script>", html)
+    assert not re.search(r'href="[\w./-]+\.css"|src="[\w./-]+\.js"|src="logo/', html), "unbundled local file left"
     return html
 
 
