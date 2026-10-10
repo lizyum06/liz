@@ -12,8 +12,9 @@
 | `embed/career-matching.html` | 위 위젯을 파일 하나로 합친 Wix 「HTML 임베드」용 코드 (`python3 tools/build_embed.py`로 생성, 한글/영문 전환 가능) |
 | `wix-copy.html` `wix-copy.md` | Wix에 붙여 넣을 한글/영문 문구 + 가입 이후 진행 순서 |
 | `card.html` | 명함 시안 (인쇄용 이미지는 `logo/card-front.png`, `logo/card-back.png`) |
+| `images/` | 프로그램 그림 3개 (`program-biotech` · `program-health` · `program-career`, SVG + PNG). 직접 그린 원본 일러스트라 저작권 걱정 없이 쓸 수 있습니다. |
 | `logo/` | 로고 SVG · PNG (`light`=밝은 배경용, `dark`=네이비 배경용) |
-| `tools/` | 단일 파일 · 문구 정리본 · 로고를 다시 만드는 스크립트 |
+| `tools/` | 단일 파일 · 문구 정리본 · 로고 · 프로그램 그림을 다시 만드는 스크립트 |
 
 ## 내용을 수정하는 방법
 
@@ -47,7 +48,7 @@ Wix 편집기에서 직접 고칩니다. 이 저장소는 디자인·문구의 �
 | Wix 문구 | `tools/gen_wix_copy.py`의 `SECTIONS` 목록 → 스크립트 재실행 |
 
 ## 아직 채워야 할 것
-- 히어로 이미지 (구매한 이미지를 `images/`에 넣고 연결)
+- 멘토 프로필 사진 (지금은 `LY` 이니셜 원)
 - 멘토 소개의 프로필 사진
 - 호주한인상공회의소의 공식 영문 명칭과 직함(사무국위원장)
 - 사이트 영어 소개 문구가 서비스에 맞는지 최종 확인
@@ -59,3 +60,11 @@ Wix 편집기에서 직접 고칩니다. 이 저장소는 디자인·문구의 �
 1. **Wix 안에서 자체 검사 만들기** — `matching.js`에 문항을 추가해 점수를 계산하면 외부 검사 없이 한 화면에서 끝납니다.
 2. **검사 → 직업 매칭 API 연결** — O*NET Web Services의 Interest Profiler 관련 기능을 쓰면 문항과 직업 매칭 결과를 서버에서 받아올 수 있습니다(무료 등록, 사용 조건은 등록 시 확인). Wix에서는 Velo 백엔드 코드가 필요합니다.
 3. **한국/호주 직업 정보 연결** — 직업군 이름에 커리어넷(한국), myfuture · Job Outlook(호주)의 직업 정보 링크를 붙입니다.
+
+## 그림을 실제 사진으로 바꾸는 방법
+지금 프로그램 그림은 직접 그린 일러스트입니다. 사진을 쓰고 싶다면:
+1. 상업적 이용이 허용되는 무료 사진(Unsplash · Pexels · Pixabay 등)이나 구매한 사진을 받습니다. 핀터레스트 이미지는 대부분 작성자에게 저작권이 있어 사이트에 그대로 쓸 수 없습니다.
+2. 파일을 `images/`에 넣습니다 (예: `images/biotech.jpg`, 가로 1200px 이상, 3:2 비율 권장).
+3. `index.html`에서 `class="art"`인 `<img>` 3곳의 `src`를 새 파일 이름으로 바꾸고, `python3 tools/build_preview.py`를 다시 실행합니다.
+
+검색어 예시: 바이오공학 — `biotechnology laboratory`, `DNA research` / 의료·보건 — `nursing`, `healthcare students` / 커리어 전환 — `adult learner`, `career change student`. 사용 전에 각 사이트의 라이선스 문구를 확인하세요.

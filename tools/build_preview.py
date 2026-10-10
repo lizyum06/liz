@@ -15,18 +15,22 @@ def read(p):
     return (ROOT / p).read_text(encoding="utf-8")
 
 
+MIME = {".svg": "image/svg+xml", ".png": "image/png", ".jpg": "image/jpeg", ".jpeg": "image/jpeg", ".webp": "image/webp"}
+
+
 def data_uri(path):
     raw = (ROOT / path).read_bytes()
-    return "data:image/svg+xml;base64," + base64.b64encode(raw).decode()
+    return f"data:{MIME[pathlib.Path(path).suffix.lower()]};base64," + base64.b64encode(raw).decode()
 
 
 def bundle():
     html = read("index.html")
-    html = re.sub(r'src="(logo/[^"]+\.svg)"', lambda m: f'src="{data_uri(m.group(1))}"', html)
-    html = re.sub(r'href="(logo/[^"]+\.svg)"', lambda m: f'href="{data_uri(m.group(1))}"', html)
+    img = r'((?:logo|images)/[^"]+\.(?:svg|png|jpe?g|webp))'
+    html = re.sub(r'src="' + img + '"', lambda m: f'src="{data_uri(m.group(1))}"', html)
+    html = re.sub(r'href="' + img + '"', lambda m: f'href="{data_uri(m.group(1))}"', html)
     html = re.sub(r'<link rel="stylesheet" href="([\w./-]+\.css)">', lambda m: "<style>\n" + read(m.group(1)) + "\n</style>", html)
     html = re.sub(r'<script src="([\w./-]+\.js)"></script>', lambda m: "<script>\n" + read(m.group(1)) + "\n</script>", html)
-    assert not re.search(r'href="[\w./-]+\.css"|src="[\w./-]+\.js"|src="logo/', html), "unbundled local file left"
+    assert not re.search(r'href="[\w./-]+\.css"|src="[\w./-]+\.js"|src="(?:logo|images)/', html), "unbundled local file left"
     return html
 
 
