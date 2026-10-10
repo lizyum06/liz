@@ -147,7 +147,9 @@
       var ul = el("ul", "jobs");
       jobs.forEach(function (j) {
         var li = el("li", null, j.text);
-        li.appendChild(el("span", "job-type", j.type));
+        var badge = el("span", "job-type", j.type);
+        badge.dataset.type = j.type;
+        li.appendChild(badge);
         ul.appendChild(li);
       });
       out.appendChild(ul);

@@ -21,15 +21,18 @@ page = f"""<!doctype html>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&display=swap" rel="stylesheet">
 <style>
-  /* Wix에서 이 블록이 놓이는 섹션 배경색을 #f7f4ec(크림)로 맞추면 경계 없이 자연스럽습니다. */
-  :root {{ --bg:#f7f4ec; --surface:#ffffff; --text:#14233a; --muted:#5f6879; --border:#e3dfd2; --accent:#9a7632; --accent-soft:#f1e8d3; --btn-bg:#14233a; --btn-fg:#f7f4ec; }}
+  /* Wix에서 이 블록이 놓이는 섹션 배경색을 #ffffff(흰색)로 맞추면 경계 없이 자연스럽습니다. */
+  :root {{ --bg:#ffffff; --band:#faf6f0; --surface:#ffffff; --text:#1e1e1a; --muted:#5b574f; --border:#e6e0d4; --line:#1e1e1a;
+          --yellow:#ffda00; --purple:#ca92fc; --teal:#2aceaa; --yellow-soft:#fff4b3; --purple-soft:#efe1fe; --teal-soft:#d6f5ed;
+          --on-color:#1e1e1a; --accent:#6b2fb3; --accent-soft:#efe1fe; --btn-bg:#ffda00; --btn-fg:#1e1e1a; --radius:18px; }}
   * {{ box-sizing: border-box; }}
   body {{ margin: 0; padding: 20px 16px; background: var(--bg); color: var(--text);
          font: 16px/1.7 "Noto Sans KR", -apple-system, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; word-break: keep-all; }}
-  .wrap {{ max-width: 860px; margin: 0 auto; }}
-  .btn {{ display: inline-block; padding: 9px 20px; border: 1px solid var(--border); border-radius: 999px; background: var(--surface); color: var(--text); font: inherit; font-weight: 700; font-size: 0.92rem; text-decoration: none; cursor: pointer; }}
+  .wrap {{ max-width: 920px; margin: 0 auto; }}
+  .btn {{ display: inline-block; padding: 10px 22px; border: 1.5px solid var(--line); border-radius: 999px; background: var(--surface); color: var(--text); font: inherit; font-weight: 700; font-size: 0.92rem; text-decoration: none; cursor: pointer; transition: transform .15s, box-shadow .15s; }}
+  .btn:hover {{ transform: translateY(-2px); box-shadow: 0 4px 0 var(--line); }}
   .btn.primary {{ background: var(--btn-bg); border-color: var(--btn-bg); color: var(--btn-fg); }}
-  .btn:focus-visible {{ outline: 2px solid var(--accent); outline-offset: 2px; }}
+  .btn:focus-visible {{ outline: 3px solid var(--purple); outline-offset: 2px; }}
   .muted {{ color: var(--muted); }}
   .note {{ color: var(--muted); font-size: 0.85rem; }}
   .matcher {{ display: grid; gap: 14px; }}

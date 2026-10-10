@@ -40,7 +40,7 @@ Wix 편집기에서 직접 고칩니다. 이 저장소는 디자인·문구의 �
 | 히어로 · 소개 문구 | `index.html` (`class="hero"` 부분) |
 | 이메일 | `index.html` 문의 섹션 (`info@thescholaredu.com` 두 곳) · `card.html` |
 | 명함 연락처 | `card.html`의 `.contact` (이메일 · 전화 `+61 415 732 723`) |
-| 색상 | `style.css` 맨 위 `:root` (네이비 `#14233a`, 골드 `#b08d4c`, 크림 `#f7f4ec`) |
+| 사이트 색상 | `style.css` 맨 위 `:root` (먹색 `#1e1e1a`, 노랑 `#ffda00`, 연보라 `#ca92fc`, 민트 `#2aceaa`, 크림 `#faf6f0`). 로고 · 명함은 네이비 `#14233a` · 골드 `#b08d4c` |
 | 명함 PNG 다시 만들기 | `card.html`을 브라우저에서 열어 앞면/뒷면을 1050×600px로 캡처 |
 | 로고 모양 | `tools/logo/gen_logo.py` (설명은 파일 맨 위) |
 | 직업군 · 프로그램 매칭 내용 | `matching.js` 맨 위의 `JOBS`(유형별 직업군), `PROGRAMS`(프로그램별 가중치) |
