@@ -192,10 +192,17 @@ main { max-width: 900px; margin: 0 auto; padding: 0 24px; }
 .result ul { margin: 0; padding-left: 20px; }
 .result li { margin-bottom: 4px; }
 
-.days { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
-.days li { display: grid; grid-template-columns: 70px 1fr; gap: 14px; padding: 16px 20px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); align-items: center; }
-.days b { color: var(--accent); }
-.days small { color: var(--muted); }
+.program { display: grid; gap: 12px; padding: 24px; margin-bottom: 16px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); }
+.program h3 { margin: 0; font-size: 1.25rem; line-height: 1.4; }
+.program h3 .en { display: block; margin-top: 2px; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.04em; color: var(--accent); }
+.program > p { margin: 0; }
+.bundle { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.bundle li { padding: 6px 14px; border-radius: 999px; background: var(--accent-soft); font-weight: 600; font-size: 0.92rem; }
+.bundle small { margin-left: 6px; font-weight: 400; color: var(--muted); }
+.cats { display: grid; gap: 12px; grid-template-columns: repeat(2, 1fr); margin-top: 4px; }
+.cat { min-width: 0; padding: 18px; border: 1px solid var(--border); border-radius: 12px; background: var(--bg); }
+.cat h4 { margin: 0 0 6px; font-size: 1.02rem; line-height: 1.4; overflow-wrap: anywhere; }
+.cat p { margin: 0; color: var(--muted); font-size: 0.94rem; }
 
 .portfolio { list-style: none; margin: 16px 0 0; padding: 0; display: grid; gap: 10px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
 .portfolio li { padding: 14px 18px; background: var(--accent-soft); border-radius: 12px; font-weight: 600; }
@@ -228,6 +235,10 @@ main { max-width: 900px; margin: 0 auto; padding: 0 24px; }
   border-top: 1px solid var(--border);
 }
 
+@media (max-width: 700px) {
+  .cats { grid-template-columns: 1fr; }
+}
+
 @media (max-width: 860px) {
   .steps { grid-template-columns: repeat(2, 1fr); }
   .tiles { grid-template-columns: repeat(2, 1fr); }
@@ -247,7 +258,6 @@ main { max-width: 900px; margin: 0 auto; padding: 0 24px; }
   main { padding-left: 16px; padding-right: 16px; }
   .site-footer { width: calc(100% - 32px); }
   .profile { flex-direction: column; align-items: flex-start; }
-  .days li { grid-template-columns: 1fr; gap: 4px; }
 }
 
 </style>
@@ -332,15 +342,34 @@ main { max-width: 900px; margin: 0 auto; padding: 0 24px; }
     </section>
 
     <section id="program" class="section">
-      <h2>Australia Future Experience</h2>
-      <p class="section-lead">5 Days / Sydney — 관광이나 영어캠프가 아닌, 5일간의 진로 발견 경험 (샘플 구성)</p>
-      <ol class="days">
-        <li><b>Day 1</b><span>Discover Sydney’s Future Infrastructure<br><small>도시 인프라 · 자동화 철도</small></span></li>
-        <li><b>Day 2</b><span>Science &amp; Medicine<br><small>연구시설 · 과학 · 의료</small></span></li>
-        <li><b>Day 3</b><span>Water &amp; Sustainability<br><small>수자원 · 환경 · 지속가능성</small></span></li>
-        <li><b>Day 4</b><span>School &amp; Boarding Experience<br><small>파트너 학교 · 기숙사 생활</small></span></li>
-        <li><b>Day 5</b><span>Career Reflection &amp; Mentor Day<br><small>관심 분야별 멘토 · 다음 pathway</small></span></li>
-      </ol>
+      <h2>Programs</h2>
+      <p class="section-lead">대학 · 기관 · 산업체와 함께 직무와 학업을 연결하는 두 가지 프로그램입니다.</p>
+
+      <article class="program">
+        <h3>직무 관련 세미나 프로그램 <span class="en">Job-Related Seminar Program</span></h3>
+        <p>대학, 기관, 산업체를 묶어 직무와 연결된 세미나로 구성합니다. 관심 있는 분야를 골라 참여하세요.</p>
+        <ul class="bundle" aria-label="참여 주체">
+          <li>대학 <small>University</small></li>
+          <li>기관 <small>Organisation</small></li>
+          <li>산업체 <small>Industry</small></li>
+        </ul>
+        <div class="cats">
+          <section class="cat">
+            <h4>Biotechnology &amp; Bioengineering</h4>
+            <p>생명과학을 바탕으로 공학, 기술, AI 등을 결합해 새로운 기술과 제품을 개발하는 분야</p>
+          </section>
+          <section class="cat">
+            <h4>Medicine, Nursing &amp; Health Sciences</h4>
+            <p>인간의 건강을 유지하고 질병을 예방·진단·치료하며 환자의 회복을 지원하는 분야</p>
+          </section>
+        </div>
+      </article>
+
+      <article class="program">
+        <h3>커리어 전환 및 학업 병행 프로그램 <span class="en">Career Change &amp; Study Program</span></h3>
+        <p>직업과 연관된 학과의 커리어 과정을 통해 커리어 전환과 학업을 병행합니다.</p>
+      </article>
+
       <p class="note">프로그램은 개발 중이며, 일정·장소·참가 조건은 각 기관 및 학교의 정책과 협의 결과에 따라 달라질 수 있습니다.</p>
 
       <h3 class="sub">My Australian Future Portfolio</h3>

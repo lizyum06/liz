@@ -102,19 +102,23 @@ _스트립 4 · 제목 + 설명 → 아래 '임베드 코드(embed/self-discover
 | 관심사 8개 | 연구 · 사람 · 문제 해결 · 만들기 · 자연 · 창의성 · 기술 · 리더십 | Research · People · Problem-solving · Building · Nature · Creativity · Technology · Leadership |
 | 결과 문구 | 직접 경험해 보면 어떨까요? | Why not experience it? |
 
-## 6. 프로그램 (5일 샘플)
-_스트립 5 · 제목 + 설명 + 5일 일정 + 안내문_
+## 6. 프로그램 (직무 관련 세미나 · 커리어 전환)
+_스트립 5 · 제목 + 프로그램 카드 2개 (프로그램 1 안에 카테고리 카드 2개)_
 
 | 항목 | 한글 | English |
 |---|---|---|
-| 제목 | 호주 미래 체험 | Australia Future Experience |
-| 설명 | 시드니 5일. 관광이나 영어캠프가 아닌, 5일간의 진로 발견 경험 (샘플 구성) | Five days in Sydney. A career discovery experience, not a holiday tour or English camp (sample outline). |
-| Day 1 | 시드니의 미래 인프라 탐방<br>도시 인프라 · 자동화 철도 | Discover Sydney's Future Infrastructure<br>Urban infrastructure · automated rail |
-| Day 2 | 과학 & 의료<br>연구시설 · 과학 · 의료 | Science & Medicine<br>Research facilities · science · healthcare |
-| Day 3 | 수자원 & 지속가능성<br>수자원 · 환경 · 지속가능성 | Water & Sustainability<br>Water resources · environment · sustainability |
-| Day 4 | 학교 & 기숙사 체험<br>파트너 학교 · 기숙사 생활 | School & Boarding Experience<br>Partner school · boarding life |
-| Day 5 | 진로 성찰 & 멘토 데이<br>관심 분야별 멘토 · 다음 진로 경로 | Career Reflection & Mentor Day<br>Mentors by interest · next pathway |
-| 안내문 | 프로그램은 개발 중이며, 일정·장소·참가 조건은 각 기관 및 학교의 정책과 협의 결과에 따라 달라질 수 있습니다. | This program is in development. Schedule, locations and eligibility depend on each organisation's and school's policy. |
+| 제목 | 프로그램 | Programs |
+| 한 줄 설명 | 대학 · 기관 · 산업체와 함께 직무와 학업을 연결하는 두 가지 프로그램입니다. | Two programs that connect careers and study, together with universities, organisations and industry. |
+| 프로그램 1 제목 | 직무 관련 세미나 프로그램 | Job-Related Seminar Program |
+| 프로그램 1 설명 | 대학, 기관, 산업체를 묶어 직무와 연결된 세미나로 구성합니다. 관심 있는 분야를 골라 참여하세요. | Universities, organisations and industry come together in seminars built around real job roles. Choose the field that interests you. |
+| 프로그램 1 참여 주체 | 대학 · 기관 · 산업체 | Universities · Organisations · Industry |
+| 카테고리 1 제목 | Biotechnology & Bioengineering | Biotechnology & Bioengineering |
+| 카테고리 1 설명 | 생명과학을 바탕으로 공학, 기술, AI 등을 결합해 새로운 기술과 제품을 개발하는 분야 | Fields that build on the life sciences and combine engineering, technology and AI to develop new technologies and products. |
+| 카테고리 2 제목 | Medicine, Nursing & Health Sciences | Medicine, Nursing & Health Sciences |
+| 카테고리 2 설명 | 인간의 건강을 유지하고 질병을 예방·진단·치료하며 환자의 회복을 지원하는 분야 | Fields that maintain human health, prevent, diagnose and treat disease, and support patients' recovery. |
+| 프로그램 2 제목 | 커리어 전환 및 학업 병행 프로그램 | Career Change & Study Program |
+| 프로그램 2 설명 | 직업과 연관된 학과의 커리어 과정을 통해 커리어 전환과 학업을 병행합니다. | Change careers while you study, through career courses in the departments linked to the job. |
+| 안내문 | 프로그램은 개발 중이며, 일정·장소·참가 조건은 각 기관 및 학교의 정책과 협의 결과에 따라 달라질 수 있습니다. | These programs are in development. Schedule, locations and eligibility depend on each organisation's and school's policy. |
 
 ## 7. 포트폴리오
 _스트립 5 아래 · 제목 + 설명 + 항목 8개_

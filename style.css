@@ -180,10 +180,17 @@ main { max-width: 900px; margin: 0 auto; padding: 0 24px; }
 .result ul { margin: 0; padding-left: 20px; }
 .result li { margin-bottom: 4px; }
 
-.days { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
-.days li { display: grid; grid-template-columns: 70px 1fr; gap: 14px; padding: 16px 20px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); align-items: center; }
-.days b { color: var(--accent); }
-.days small { color: var(--muted); }
+.program { display: grid; gap: 12px; padding: 24px; margin-bottom: 16px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); }
+.program h3 { margin: 0; font-size: 1.25rem; line-height: 1.4; }
+.program h3 .en { display: block; margin-top: 2px; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.04em; color: var(--accent); }
+.program > p { margin: 0; }
+.bundle { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.bundle li { padding: 6px 14px; border-radius: 999px; background: var(--accent-soft); font-weight: 600; font-size: 0.92rem; }
+.bundle small { margin-left: 6px; font-weight: 400; color: var(--muted); }
+.cats { display: grid; gap: 12px; grid-template-columns: repeat(2, 1fr); margin-top: 4px; }
+.cat { min-width: 0; padding: 18px; border: 1px solid var(--border); border-radius: 12px; background: var(--bg); }
+.cat h4 { margin: 0 0 6px; font-size: 1.02rem; line-height: 1.4; overflow-wrap: anywhere; }
+.cat p { margin: 0; color: var(--muted); font-size: 0.94rem; }
 
 .portfolio { list-style: none; margin: 16px 0 0; padding: 0; display: grid; gap: 10px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
 .portfolio li { padding: 14px 18px; background: var(--accent-soft); border-radius: 12px; font-weight: 600; }
@@ -216,6 +223,10 @@ main { max-width: 900px; margin: 0 auto; padding: 0 24px; }
   border-top: 1px solid var(--border);
 }
 
+@media (max-width: 700px) {
+  .cats { grid-template-columns: 1fr; }
+}
+
 @media (max-width: 860px) {
   .steps { grid-template-columns: repeat(2, 1fr); }
   .tiles { grid-template-columns: repeat(2, 1fr); }
@@ -235,5 +246,4 @@ main { max-width: 900px; margin: 0 auto; padding: 0 24px; }
   main { padding-left: 16px; padding-right: 16px; }
   .site-footer { width: calc(100% - 32px); }
   .profile { flex-direction: column; align-items: flex-start; }
-  .days li { grid-template-columns: 1fr; gap: 4px; }
 }
