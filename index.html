@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>더 스칼라 에듀 · The Scholar Edu — 진로교육 · 글로벌교육 컨설팅</title>
   <meta name="description" content="더 스칼라 에듀(The Scholar Edu)는 호주의 학교·대학·현장·멘토를 직접 경험하며 진로를 발견하도록 돕는 진로교육 · 글로벌교육 컨설팅입니다.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&display=swap" rel="stylesheet">
   <link rel="icon" type="image/svg+xml" href="logo/scholar-monogram-light.svg">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -135,7 +138,7 @@
           <ul class="roles">
             <li><b>Korean Language School</b> — 이중언어반 교사</li>
             <li><b>호주한인상공회의소</b> — 사무행정 지원</li>
-            <li><b>The Scholar</b> — 대표</li>
+            <li><b>더 스칼라 에듀 The Scholar Edu</b> — 대표</li>
           </ul>
         </div>
       </div>
@@ -143,16 +146,16 @@
 
     <section id="contact" class="section">
       <h2>문의하기</h2>
-      <p>프로그램, 멘토링, 학교·기관 협력 제안 모두 환영합니다. 보내기를 누르면 메일 앱이 열립니다.</p>
-      <form id="contact-form" class="form">
-        <label>이름
-          <input name="name" required autocomplete="name">
-        </label>
-        <label>관심 분야 / 문의 내용
-          <textarea name="message" rows="4" required></textarea>
-        </label>
-        <button class="btn primary" type="submit">보내기</button>
-      </form>
+      <p>프로그램, 멘토링, 학교·기관 협력 제안 모두 환영합니다.</p>
+      <div class="contact-card">
+        <span class="contact-label">Email</span>
+        <strong id="contact-email" class="contact-email">info@thescholaredu.com</strong>
+        <div class="contact-actions">
+          <button id="copy-email" class="btn primary" type="button">이메일 주소 복사</button>
+          <a class="btn" href="mailto:info@thescholaredu.com">메일 앱으로 보내기</a>
+        </div>
+        <p id="copy-status" class="note" role="status"></p>
+      </div>
     </section>
   </main>
 

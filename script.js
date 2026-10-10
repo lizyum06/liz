@@ -66,12 +66,19 @@ Object.keys(INTERESTS).forEach((key) => {
 });
 render();
 
-const CONTACT_EMAIL = "info@thescholaredu.com";
-
-document.getElementById("contact-form").addEventListener("submit", (e) => {
-  e.preventDefault();
-  const data = new FormData(e.target);
-  const subject = encodeURIComponent(`[The Scholar Edu 문의] ${data.get("name")}`);
-  const body = encodeURIComponent(data.get("message"));
-  location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
+// Contact: show the address and let people copy it (works everywhere, no mail app needed).
+const emailText = document.getElementById("contact-email");
+const copyStatus = document.getElementById("copy-status");
+document.getElementById("copy-email").addEventListener("click", async () => {
+  try {
+    await navigator.clipboard.writeText(emailText.textContent.trim());
+    copyStatus.textContent = "이메일 주소를 복사했습니다.";
+  } catch (e) {
+    const r = document.createRange();
+    r.selectNodeContents(emailText);
+    const s = getSelection();
+    s.removeAllRanges();
+    s.addRange(r);
+    copyStatus.textContent = "주소를 선택했습니다. Ctrl+C(맥은 ⌘C)로 복사하세요.";
+  }
 });
